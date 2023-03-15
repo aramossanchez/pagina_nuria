@@ -1,0 +1,16 @@
+:root {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

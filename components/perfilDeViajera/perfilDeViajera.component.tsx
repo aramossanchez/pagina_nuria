@@ -2,7 +2,13 @@ import Image from 'next/image';
 import style from './perfilDeViajera.module.scss';
 import { IconChevronsRight } from '@tabler/icons-react';
 
-export default function PerfilDeViajeraComponent({next}) {
+type FuncionVacia = () => void;
+
+interface PerfilDeViajeraComponentProps {
+  next: FuncionVacia;
+}
+
+export default function PerfilDeViajeraComponent({next}: PerfilDeViajeraComponentProps) {
 
     return (
         <article className={style.component_container}>

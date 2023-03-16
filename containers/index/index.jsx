@@ -2,6 +2,7 @@ import { useState } from 'react';
 import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
 import MisViajesComponent from '../../components/misViajes/misViajes.component';
+import EventosYCampañasComponent from '../../components/eventosYCampañas/eventosYCampañas.component';
 
 export default function IndexContainer() {
 
@@ -18,7 +19,10 @@ export default function IndexContainer() {
                         <PerfilDeViajeraComponent next={() => setPopUpSelected('misViajes')} />
                     </div>
                     <div className={popUpSelected === 'misViajes' ? style.popup_container_active : style.popup_container_hide}>
-                        <MisViajesComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventoYCampañas')} />
+                        <MisViajesComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventosYCampañas')} />
+                    </div>
+                    <div className={popUpSelected === 'eventosYCampañas' ? style.popup_container_active : style.popup_container_hide}>
+                        <EventosYCampañasComponent previous={() => setPopUpSelected('misViajes')} next={() => setPopUpSelected('eventosYCampañas')} />
                     </div>
                 </div>
             }
@@ -37,8 +41,8 @@ export default function IndexContainer() {
                 <header className={menuOpen ? style.header_open : style.header_closed}>
                     <ul>
                         <li onClick={() => setPopUpSelected('perfilDeViajera')} className={popUpSelected === 'perfilDeViajera' ?style.menu_link_selected : null}>Perfil de viajera</li>
-                        <li onClick={() => setPopUpSelected('misViajes')} className={popUpSelected === 'misViajes' ?style.menu_link_selected : null}>Mis viajes</li>
-                        <li>Eventos y campañas</li>
+                        <li onClick={() => setPopUpSelected('misViajes')} className={popUpSelected === 'misViajes' ?style.menu_link_selected : null}>Mi ruta</li>
+                        <li onClick={() => setPopUpSelected('eventosYCampañas')} className={popUpSelected === 'eventosYCampañas' ?style.menu_link_selected : null}>Experiencias</li>
                         <li>Habilidades</li>
                         <li>Compañeros de viaje</li>
                     </ul>

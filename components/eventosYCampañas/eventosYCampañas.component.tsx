@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import style from './misViajes.module.scss';
+import style from './eventosYCampañas.module.scss';
 import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
 import { useState } from 'react';
 import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
@@ -11,7 +11,7 @@ interface FuncionVaciaInterface {
     previous: FuncionVacia;
 }
 
-export default function MisViajesComponent({ previous }: FuncionVaciaInterface, { next }: FuncionVaciaInterface) {
+export default function EventosYCampañasComponent({ previous }: FuncionVaciaInterface, { next }: FuncionVaciaInterface) {
 
     const [selectedSection, setSelectedSection] = useState('inicio');
 
@@ -24,39 +24,26 @@ export default function MisViajesComponent({ previous }: FuncionVaciaInterface, 
                 alt={'Foto de sello'}
             />
             <div className={style.img_container}>
-                <Image
-                    fill
-                    src={'/images/camino_mis_viajes.png'}
-                    alt={'Foto perfil viajera'}
-                />
-                <div className={style.section_selector_container}>
-                    <Image
-                        width={50}
-                        height={50}
-                        src={'/images/googlemaps.svg'}
-                        alt={'Foto perfil viajera'}
-                        onClick={() => setSelectedSection('final')}
-                    />
-                    <span onClick={() => setSelectedSection('manchuela')}>DENOMINACIÓN DE ORIGEN MANCHUELA</span>
-                    <span onClick={() => setSelectedSection('imaginalia')}>CENTRO COMERCIAL IMAGINALIA</span>
-                    <span onClick={() => setSelectedSection('cumar')}>CUMAR S.L.U.</span>
-                </div>
+                <div><div><span>PROYECTOS</span></div></div>
+                <div><div><span>EVENTOS</span></div></div>
+                <div><div><span>CAMPAÑAS OFFLINE</span></div></div>
+                <div><div><span>CAMPAÑAS ONLINE</span></div></div>
             </div>
             {
                 selectedSection === 'inicio' &&
                 <div className={style.information_container_inicio}>
-                    <h1>MI RUTA</h1>
+                    <h1>EXPERIENCIAS</h1>
                     <div className={style.text_section_inicio}></div>
                     <span>
-                        Antes de hablar sobre mi ruta profesional, me gustaría dar las gracias a todas y cada una de las personas que han confiado en mí y me han dado la oportunidad de crecer como profesional a su lado.
+                    Tengo que agradecer la ruta escogida, porque gracias a ella he aprendido a gestionar y dirigir proyectos, organizar grandes eventos y desarrollar campañas (offline y online). Aunque he de admitir que el sendero no siempre ha sido un camino de rosas, cada piedra en el camino me ha ayudado a aumentar mi seguridad, intuición y creatividad.
                     </span>
-                    <h2>¡GRACIAS, DE VERDAD!</h2>
+                    <h2>¡TE INVITO A DESCUBRIRLO!</h2>
                 </div>
             }
             {
                 selectedSection === 'cumar' &&
                 <div className={style.information_container_job}>
-                    <h1>MI RUTA</h1>
+                    <h1>MIS VIAJES</h1>
                     <h2>CUMAR S.L.U</h2>
                     <h6>06/2014 - 09/2017</h6>
                     <div className={style.functions_list}>
@@ -81,7 +68,7 @@ export default function MisViajesComponent({ previous }: FuncionVaciaInterface, 
             {
                 selectedSection === 'imaginalia' &&
                 <div className={style.information_container_job}>
-                    <h1>MI RUTA</h1>
+                    <h1>MIS VIAJES</h1>
                     <h2>CENTRO COMERCIAL IMAGINALIA</h2>
                     <h6>05/2018 - 09/2022</h6>
                     <div className={style.functions_list}>
@@ -110,7 +97,7 @@ export default function MisViajesComponent({ previous }: FuncionVaciaInterface, 
             {
                 selectedSection === 'final' &&
                 <div className={style.information_container_inicio}>
-                    <h1>MI RUTA</h1>
+                    <h1>MIS VIAJES</h1>
                     <div className={style.text_section_inicio}></div>
                     <span>
                     Me encantaría seguir aprendiendo y creciendo tanto a nivel personal como a nivel profesional. Por eso, te invito a que me conozcas.
@@ -121,7 +108,7 @@ export default function MisViajesComponent({ previous }: FuncionVaciaInterface, 
             {
                 selectedSection === 'manchuela' &&
                 <div className={style.information_container_job}>
-                    <h1>MI RUTA</h1>
+                    <h1>MIS VIAJES</h1>
                     <h2>DENOMINACIÓN DE ORIGEN MANCHUELA</h2>
                     <h6>10/2022 - 02/2023</h6>
                     <div className={style.functions_list}>

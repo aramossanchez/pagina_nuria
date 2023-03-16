@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import style from './misViajes.module.scss';
 import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
+import { useState } from 'react';
 import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
 
 type FuncionVacia = () => void;
 
 interface FuncionVaciaInterface {
-    previous: FuncionVacia;
     next: FuncionVacia;
+    previous: FuncionVacia;
 }
 
 export default function MisViajesComponent({ previous }: FuncionVaciaInterface, { next }: FuncionVaciaInterface) {
+
+    const [selectedSection, setSelectedSection] = useState('principal');
 
     return (
         <article className={style.component_container}>
@@ -20,34 +23,59 @@ export default function MisViajesComponent({ previous }: FuncionVaciaInterface, 
                 src={'/images/sello.png'}
                 alt={'Foto de sello'}
             />
-            <Image
-                width={500}
-                height={700}
-                src={'/images/perfil_viajera.jpg'}
-                alt={'Foto perfil viajera'}
-            />
-            <div>
-                <h1>MIS VIAJES</h1>
-                <p>
-                    Soy Nuria Zamora, manchega y villamalense desde 1994, enamorada de mi tierra, la Manchuela, aunque durante los últimos 10 años he estado viviendo en Albacete, la cuidad que me ha visto crecer profesionalmente y a la que tengo grandes cosas que agradecer.
-                </p>
-                <p>
-                    Graduada en Administración y Dirección de Empresas en el año 2018 por la Universidad de Castilla-La Mancha. De esta etapa de mi vida, resalto el esfuerzo y sacrificio, además de las grandes amistades que logré conseguir ahí. En mi último año de carrera, tuve la oportunidad de especializarme en Dirección Estratégica y Marketing. Gracias a esta decisión, descubrí cuál era mi verdadera pasión y cuál era el ámbito al que me quería dedicar el resto de mi vida, “EL MARKETING”.
-                </p>
-                <p>
-                    Continué mi andadura como estudiante de máster en la Universidad Internacional de La Rioja formándome como directora de Marketing Estratégico y, ¡esto no acaba aquí! Actualmente, me encuentro especializándome en Marketing Digital dentro de la misma Universidad.
-                </p>
-                <p>
-                    El inglés es un idioma que domino con Certificado de B1 Preliminary Cambrigde, aunque sigo en constante aprendizaje y formación.
-                </p>
-                <p>
-                    <span className={style.chip}>#estrategia</span>
-                    <span className={style.chip}>#eventos</span>
-                    <span className={style.chip}>#marketing_digital</span>
-                    <span className={style.chip}>#comunicación</span>
-                    <span className={style.chip}>#campañas</span>
-                </p>
+            <div className={style.img_container}>
+                <Image
+                    fill
+                    src={'/images/perfil_viajera.jpg'}
+                    alt={'Foto perfil viajera'}
+                />
+                <div className={style.section_selector_container}>
+                    <span onClick={() => setSelectedSection('test4')}>test4</span>
+                    <span onClick={() => setSelectedSection('test3')}>test3</span>
+                    <span onClick={() => setSelectedSection('test2')}>test2</span>
+                    <span onClick={() => setSelectedSection('test1')}>test1</span>
+                </div>
             </div>
+            {selectedSection === 'principal' &&
+                <div className={style.information_container}>
+                    <h1>MIS VIAJES</h1>
+                    <span>
+                        Gracias
+                    </span>
+                </div>
+            }
+            {selectedSection === 'test1' &&
+                <div className={style.information_container}>
+                    <h1>MIS VIAJES 1</h1>
+                    <span>
+                        Test1
+                    </span>
+                </div>
+            }
+            {selectedSection === 'test2' &&
+                <div className={style.information_container}>
+                    <h1>MIS VIAJES 2</h1>
+                    <span>
+                        Test2
+                    </span>
+                </div>
+            }
+            {selectedSection === 'test3' &&
+                <div className={style.information_container}>
+                    <h1>MIS VIAJES 3</h1>
+                    <span>
+                        Test3
+                    </span>
+                </div>
+            }
+            {selectedSection === 'test4' &&
+                <div className={style.information_container}>
+                    <h1>MIS VIAJES 4</h1>
+                    <span>
+                        Test4
+                    </span>
+                </div>
+            }
             <ButtonArrowLeftComponent onClick={previous} />
             <ButtonArrowRightComponent onClick={next} />
         </article>

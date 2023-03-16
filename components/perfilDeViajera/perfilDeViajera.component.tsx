@@ -19,12 +19,14 @@ export default function PerfilDeViajeraComponent({ next }: FuncionVaciaInterface
                 src={'/images/sello.png'}
                 alt={'Foto de sello'}
             />
-            <Image
-                fill
-                src={'/images/perfil_viajera.jpg'}
-                alt={'Foto perfil viajera'}
-            />
-            <div>
+            <div className={style.img_container}>
+                <Image
+                    fill
+                    src={'/images/perfil_viajera.jpg'}
+                    alt={'Foto perfil viajera'}
+                />
+            </div>
+            <div className={style.information_container}>
                 <h1>PERFIL DE VIAJERA</h1>
                 <span>
                     Soy Nuria Zamora, manchega y villamalense desde 1994, enamorada de mi tierra, la Manchuela, aunque durante los últimos 10 años he estado viviendo en Albacete, la cuidad que me ha visto crecer profesionalmente y a la que tengo grandes cosas que agradecer.
@@ -38,13 +40,13 @@ export default function PerfilDeViajeraComponent({ next }: FuncionVaciaInterface
                 <span>
                     El inglés es un idioma que domino con Certificado de B1 Preliminary Cambrigde, aunque sigo en constante aprendizaje y formación.
                 </span>
-                <span>
+                <div>
                     <span className={style.chip}>#estrategia</span>
                     <span className={style.chip}>#eventos</span>
                     <span className={style.chip}>#marketing_digital</span>
                     <span className={style.chip}>#comunicación</span>
                     <span className={style.chip}>#campañas</span>
-                </span>
+                </div>
             </div>
             <ButtonArrowRightComponent onClick={next} />
         </article>

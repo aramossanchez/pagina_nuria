@@ -4,8 +4,13 @@
     padding: 0;
     width: 100vw;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
   }
+
   main {
     width: 100%;
     display: flex;

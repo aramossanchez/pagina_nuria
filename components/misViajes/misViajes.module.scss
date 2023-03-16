@@ -21,56 +21,123 @@
         height: calc(100% - 5em);
         position: relative;
 
-        img {
+        >img:first-child {
             position: relative !important;
-            width: 100% !important;
-            height: 100% !important;
-            opacity: 0.3;
+            width: 100%;
+            height: 100%;
         }
 
         .section_selector_container {
             position: absolute;
             top: 0;
             width: 100%;
-            height: 100%;
+            height: 80%;
             z-index: 3;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            img {
+                margin-top: 13%;
+                margin-left: -55%;
+                animation-duration: 2.5s;
+                animation-name: growing;
+                animation-iteration-count: infinite;
+                cursor: pointer;
+            }
             span {
                 color: white;
                 background-color: rgb(67, 195, 255);
                 padding: 0.25em 1em;
                 border-radius: 20px;
                 cursor: pointer;
-                animation-duration: 1.5s;
+                animation-duration: 2.5s;
                 animation-name: growing;
                 animation-iteration-count: infinite;
             }
-            span:nth-child(1), span:nth-child(3) {
-                margin-left: 30%;
+            span:nth-child(2) {
+                margin-top: -5%;
+                margin-left: 20%;
             }
-            span:nth-child(2), span:nth-child(4) {
-                margin-right: 30%;
+            span:nth-child(3) {
+                margin-left: -30%;
+            }
+            span:nth-child(4) {
+                margin-left: 45%;
             }
         }
     }
 
-    .information_container {
+    .information_container_inicio, .information_container_job {
         width: calc(70% - 9em);
         height: calc(100% - 5em);
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 0 2em;
+        h1 {
+            font-size: 4em;
+            width: 100%;
+            text-align: center;
+            margin-top: 5%;
+        }
+        .text_section_inicio {
+            margin-top: 10%;
+        }
+        h2 {
+            color: grey;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+        }
     }
-    h1 {
-        font-size: 4em;
-        width: 100%;
-        text-align: center;
-        margin-top: 5%;
+    .information_container_job {
+        h1 {
+            margin: 0;
+            margin-top: 5%;
+        }
+        h2 {
+            color: grey;
+            width: 100%;
+            text-align: left;
+            font-size: 2em;
+            margin-bottom: 0.25em;
+        }
+        h6 {
+            color: rgba(128, 128, 128, 0.5);
+            font-size: 0.9em;
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+        .functions_list {
+            margin-top: 2%;
+            color: grey;
+            span {
+                font-weight: 600;
+            }
+            ol {
+                list-style: none;
+                li {
+                    margin: 0.5em 0;
+                }
+            }
+        }
+        .chips_container {
+            margin-top: 1%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        .chip {
+            color: white;
+            border-radius: 20px;
+            background-color: rgb(67, 195, 255);
+            padding: 0.5em 1em;
+        }
     }
 
     >div>span {
@@ -145,7 +212,7 @@
     }
 
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     100% {

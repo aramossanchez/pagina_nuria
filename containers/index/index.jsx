@@ -46,7 +46,7 @@ export default function IndexContainer() {
                 <div className={style.text_presentation_container}>
                     <h1>¡Hola! ¿Quieres viajar conmigo?</h1>
                     <span>Acompáñame en este viaje y descubre todas mis experiencias</span>
-                    <span>#marketing - #eventos</span>
+                    <span>#marketing - #eventos - #dirección</span>
                     <article className={style.buttons_presentation_container}>
                         <div>¿Hablamos?</div>
                     </article>

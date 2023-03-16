@@ -25,7 +25,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         >div {
-            border: 1px solid black;
+            border: 1px dotted rgba(0, 0, 0, 0.432);
             padding: 2em;
             div {
                 height: 100%;

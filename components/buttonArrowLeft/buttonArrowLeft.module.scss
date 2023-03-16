@@ -1,0 +1,23 @@
+.svg {
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    cursor: pointer;
+    animation-duration: 1.5s;
+    animation-name: growing;
+    animation-iteration-count: infinite;
+}
+
+@keyframes growing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

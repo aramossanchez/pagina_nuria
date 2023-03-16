@@ -12,13 +12,14 @@ export default function IndexContainer() {
         <section>
             {popUpSelected.length > 0 &&
 
-                <div className={`${style.popup_container}`}>
-                    {popUpSelected === 'perfilDeViajera' &&
+                <div className={`${style.popups_container}`}>
+                    <div className={style.close_popup} onClick={() => setPopUpSelected('')}></div>
+                    <div className={popUpSelected === 'perfilDeViajera' ? style.popup_container_active : style.popup_container_hide}>
                         <PerfilDeViajeraComponent next={() => setPopUpSelected('misViajes')} />
-                    }
-                    {popUpSelected === 'misViajes' &&
-                        <MisViajesComponent />
-                    }
+                    </div>
+                    <div className={popUpSelected === 'misViajes' ? style.popup_container_active : style.popup_container_hide}>
+                        <MisViajesComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventoYCampañas')} />
+                    </div>
                 </div>
             }
             <article className={style.presentation_container}>

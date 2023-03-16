@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import style from './perfilDeViajera.module.scss';
 import { IconChevronsRight } from '@tabler/icons-react';
+import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
 
 type FuncionVacia = () => void;
 
-interface PerfilDeViajeraComponentProps {
+interface FuncionVaciaInterface {
   next: FuncionVacia;
 }
 
-export default function PerfilDeViajeraComponent({next}: PerfilDeViajeraComponentProps) {
+export default function PerfilDeViajeraComponent({next}: FuncionVaciaInterface) {
 
     return (
         <article className={style.component_container}>
@@ -46,7 +47,7 @@ export default function PerfilDeViajeraComponent({next}: PerfilDeViajeraComponen
                     <span className={style.chip}>#campañas</span>
                 </p>
             </div>
-            <IconChevronsRight color='rgb(67, 195, 255)' size={64} onClick={next}/>
+            <ButtonArrowRightComponent onClick={next}/>
         </article>
     )
 }

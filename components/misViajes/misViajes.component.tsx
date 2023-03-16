@@ -1,8 +1,16 @@
 import Image from 'next/image';
 import style from './misViajes.module.scss';
-import { IconChevronsRight } from '@tabler/icons-react';
+import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
+import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
 
-export default function MisViajesComponent() {
+type FuncionVacia = () => void;
+
+interface FuncionVaciaInterface {
+    previous: FuncionVacia;
+    next: FuncionVacia;
+}
+
+export default function MisViajesComponent({ previous }: FuncionVaciaInterface, { next }: FuncionVaciaInterface) {
 
     return (
         <article className={style.component_container}>
@@ -40,7 +48,8 @@ export default function MisViajesComponent() {
                     <span className={style.chip}>#campañas</span>
                 </p>
             </div>
-            <IconChevronsRight color='rgb(67, 195, 255)' size={64}/>
+            <ButtonArrowLeftComponent onClick={previous} />
+            <ButtonArrowRightComponent onClick={next} />
         </article>
     )
 }

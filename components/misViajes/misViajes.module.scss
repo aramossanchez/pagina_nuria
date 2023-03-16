@@ -3,9 +3,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    height: 100%;
     gap: 3em;
     position: relative;
     overflow: hidden;
+    padding: 2em 2em 0 2.5em;
     img:first-child {
         position: absolute;
         right: -3%;
@@ -30,11 +32,5 @@
         background-color: rgb(67, 195, 255);
         padding: 0.5em 1em;
         margin-right: 2em;
-    }
-    svg {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        cursor: pointer;
     }
 }

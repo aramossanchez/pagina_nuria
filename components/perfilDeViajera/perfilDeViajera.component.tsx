@@ -6,10 +6,10 @@ import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.comp
 type FuncionVacia = () => void;
 
 interface FuncionVaciaInterface {
-  next: FuncionVacia;
+    next: FuncionVacia;
 }
 
-export default function PerfilDeViajeraComponent({next}: FuncionVaciaInterface) {
+export default function PerfilDeViajeraComponent({ next }: FuncionVaciaInterface) {
 
     return (
         <article className={style.component_container}>
@@ -20,34 +20,33 @@ export default function PerfilDeViajeraComponent({next}: FuncionVaciaInterface) 
                 alt={'Foto de sello'}
             />
             <Image
-                width={500}
-                height={700}
+                fill
                 src={'/images/perfil_viajera.jpg'}
                 alt={'Foto perfil viajera'}
             />
             <div>
                 <h1>PERFIL DE VIAJERA</h1>
-                <p>
+                <span>
                     Soy Nuria Zamora, manchega y villamalense desde 1994, enamorada de mi tierra, la Manchuela, aunque durante los últimos 10 años he estado viviendo en Albacete, la cuidad que me ha visto crecer profesionalmente y a la que tengo grandes cosas que agradecer.
-                </p>
-                <p>
+                </span>
+                <span>
                     Graduada en Administración y Dirección de Empresas en el año 2018 por la Universidad de Castilla-La Mancha. De esta etapa de mi vida, resalto el esfuerzo y sacrificio, además de las grandes amistades que logré conseguir ahí. En mi último año de carrera, tuve la oportunidad de especializarme en Dirección Estratégica y Marketing. Gracias a esta decisión, descubrí cuál era mi verdadera pasión y cuál era el ámbito al que me quería dedicar el resto de mi vida, “EL MARKETING”.
-                </p>
-                <p>
+                </span>
+                <span>
                     Continué mi andadura como estudiante de máster en la Universidad Internacional de La Rioja formándome como directora de Marketing Estratégico y, ¡esto no acaba aquí! Actualmente, me encuentro especializándome en Marketing Digital dentro de la misma Universidad.
-                </p>
-                <p>
+                </span>
+                <span>
                     El inglés es un idioma que domino con Certificado de B1 Preliminary Cambrigde, aunque sigo en constante aprendizaje y formación.
-                </p>
-                <p>
+                </span>
+                <span>
                     <span className={style.chip}>#estrategia</span>
                     <span className={style.chip}>#eventos</span>
                     <span className={style.chip}>#marketing_digital</span>
                     <span className={style.chip}>#comunicación</span>
                     <span className={style.chip}>#campañas</span>
-                </p>
+                </span>
             </div>
-            <ButtonArrowRightComponent onClick={next}/>
+            <ButtonArrowRightComponent onClick={next} />
         </article>
     )
 }

@@ -9,7 +9,7 @@ export default function PerfilDeViajeraComponent({ next }) {
       <Image
         width={250}
         height={250}
-        src={'/pagina_nuria/public/pagina_nuria/images/sello.png'}
+        src={'/pagina_nuria/images/sello.png'}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>

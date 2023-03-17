@@ -101,17 +101,6 @@ export default function MiRutaComponent({ previous, next }) {
         </div>
       }
       {
-        selectedSection === 'final' &&
-        <div className={style.information_container_inicio}>
-          <h1>MI RUTA</h1>
-          <div className={style.text_section_inicio}></div>
-          <span>
-            Me encantaría seguir aprendiendo y creciendo tanto a nivel personal como a nivel profesional. Por eso, te invito a que me conozcas.
-          </span>
-          <h2>¡HAREMOS GRANDES COSAS!</h2>
-        </div>
-      }
-      {
         selectedSection === 'manchuela' &&
         <div className={style.information_container_job}>
           <h1>MI RUTA</h1>
@@ -137,6 +126,17 @@ export default function MiRutaComponent({ previous, next }) {
             <span className={style.chip}>#eventos</span>
             <span className={style.chip}>#administración</span>
           </div>
+        </div>
+      }
+      {
+        selectedSection === 'final' &&
+        <div className={style.information_container_inicio}>
+          <h1>MI RUTA</h1>
+          <div className={style.text_section_inicio}></div>
+          <span>
+            Me encantaría seguir aprendiendo y creciendo tanto a nivel personal como a nivel profesional. Por eso, te invito a que me conozcas.
+          </span>
+          <h2>¡HAREMOS GRANDES COSAS!</h2>
         </div>
       }
       <ButtonArrowLeftComponent onClick={previous} />

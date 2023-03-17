@@ -82,6 +82,8 @@
         flex-direction: column;
         justify-content: flex-start;
         padding: 0 2em;
+        animation-duration: 0.5s;
+        animation-name: showing;
 
         h1 {
             font-size: 4em;
@@ -235,5 +237,15 @@
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

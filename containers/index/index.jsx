@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
-import MisViajesComponent from '../../components/misViajes/misViajes.component';
-import EventosYCampañasComponent from '../../components/eventosYCampañas/eventosYCampañas.component';
+import MiRutaComponent from '../../components/miRuta/miRuta.component';
+import ExperienciasComponent from '../../components/experiencias/experiencias.component';
 
 export default function IndexContainer() {
 
@@ -16,13 +16,13 @@ export default function IndexContainer() {
                 <div className={`${style.popups_container}`}>
                     <div className={style.close_popup} onClick={() => setPopUpSelected('')}></div>
                     <div className={popUpSelected === 'perfilDeViajera' ? style.popup_container_active : style.popup_container_hide}>
-                        <PerfilDeViajeraComponent next={() => setPopUpSelected('misViajes')} />
+                        <PerfilDeViajeraComponent next={() => setPopUpSelected('miRuta')} />
                     </div>
-                    <div className={popUpSelected === 'misViajes' ? style.popup_container_active : style.popup_container_hide}>
-                        <MisViajesComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventosYCampañas')} />
+                    <div className={popUpSelected === 'miRuta' ? style.popup_container_active : style.popup_container_hide}>
+                        <MiRutaComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventosYCampañas')} />
                     </div>
                     <div className={popUpSelected === 'eventosYCampañas' ? style.popup_container_active : style.popup_container_hide}>
-                        <EventosYCampañasComponent previous={() => setPopUpSelected('misViajes')} next={() => setPopUpSelected('eventosYCampañas')} />
+                        <ExperienciasComponent previous={() => setPopUpSelected('miRuta')} next={() => setPopUpSelected('eventosYCampañas')} />
                     </div>
                 </div>
             }
@@ -41,7 +41,7 @@ export default function IndexContainer() {
                 <header className={menuOpen ? style.header_open : style.header_closed}>
                     <ul>
                         <li onClick={() => setPopUpSelected('perfilDeViajera')} className={popUpSelected === 'perfilDeViajera' ?style.menu_link_selected : null}>Perfil de viajera</li>
-                        <li onClick={() => setPopUpSelected('misViajes')} className={popUpSelected === 'misViajes' ?style.menu_link_selected : null}>Mi ruta</li>
+                        <li onClick={() => setPopUpSelected('miRuta')} className={popUpSelected === 'miRuta' ?style.menu_link_selected : null}>Mi ruta</li>
                         <li onClick={() => setPopUpSelected('eventosYCampañas')} className={popUpSelected === 'eventosYCampañas' ?style.menu_link_selected : null}>Experiencias</li>
                         <li>Habilidades</li>
                         <li>Compañeros de viaje</li>

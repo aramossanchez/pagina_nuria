@@ -1,17 +1,10 @@
 import Image from 'next/image';
-import style from './eventosYCampañas.module.scss';
+import style from './experiencias.module.scss';
 import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
 import { useState } from 'react';
 import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
 
-type FuncionVacia = () => void;
-
-interface FuncionVaciaInterface {
-    next: FuncionVacia;
-    previous: FuncionVacia;
-}
-
-export default function EventosYCampañasComponent({ previous }: FuncionVaciaInterface, { next }: FuncionVaciaInterface) {
+export default function ExperienciasComponent({ previous, next }) {
 
     const [selectedSection, setSelectedSection] = useState('inicio');
 

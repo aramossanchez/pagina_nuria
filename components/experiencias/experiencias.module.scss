@@ -23,9 +23,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+
         >div {
             border: 1px dotted rgba(0, 0, 0, 0.432);
             padding: 2em;
+
             div {
                 height: 100%;
                 width: 100%;
@@ -36,6 +38,7 @@
                 align-items: center;
                 transform: rotate(180deg);
                 cursor: pointer;
+
                 span {
                     writing-mode: vertical-lr;
                     font-size: 30px;
@@ -46,36 +49,46 @@
                 }
             }
         }
-        >div:nth-child(1), >div:nth-child(3) {
+
+        >div:nth-child(1),
+        >div:nth-child(3) {
             border-right: 0px;
         }
+
         >div:nth-child(1) {
             div {
                 border: 3px dashed rgba(255, 0, 0, 0.507);
+
                 span {
                     color: rgba(255, 0, 0, 0.507);
                 }
             }
         }
+
         >div:nth-child(2) {
             div {
                 border: 3px dashed rgba(48, 124, 73, 0.459);
+
                 span {
                     color: rgba(48, 124, 73, 0.459);
                 }
             }
         }
+
         >div:nth-child(3) {
             div {
                 border: 3px dashed rgba(27, 99, 141, 0.486);
+
                 span {
                     color: rgba(27, 99, 141, 0.486);
                 }
             }
         }
+
         >div:nth-child(4) {
             div {
                 border: 3px dashed rgba(0, 0, 0, 0.445);
+
                 span {
                     color: rgba(0, 0, 0, 0.445);
                 }
@@ -83,7 +96,8 @@
         }
     }
 
-    .information_container_inicio, .information_container_job {
+    .information_container_inicio,
+    .information_container_project {
         width: calc(70% - 9em);
         height: calc(100% - 5em);
         display: flex;
@@ -91,15 +105,18 @@
         flex-direction: column;
         justify-content: flex-start;
         padding: 0 2em;
+
         h1 {
             font-size: 4em;
             width: 100%;
             text-align: center;
             margin-top: 5%;
         }
+
         .text_section_inicio {
             margin-top: 10%;
         }
+
         h2 {
             color: grey;
             width: 100%;
@@ -107,11 +124,16 @@
             font-size: 2em;
         }
     }
-    .information_container_job {
+
+    .information_container_project {
+        animation-duration: 0.5s;
+        animation-name: showing;
+
         h1 {
             margin: 0;
             margin-top: 5%;
         }
+
         h2 {
             color: grey;
             width: 100%;
@@ -119,40 +141,91 @@
             font-size: 2em;
             margin-bottom: 0.25em;
         }
-        h6 {
-            color: rgba(128, 128, 128, 0.5);
-            font-size: 0.9em;
-            margin: 0;
-            margin-bottom: 0.5em;
-        }
-        .functions_list {
-            margin-top: 2%;
-            color: grey;
-            span {
-                font-weight: 600;
+
+        .experiences_list_container {
+            margin-top: 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .experiences_list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                div {
+                    border-right: 1px solid rgb(110, 110, 110);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    text-align: center;
+                    color: black;
+                    cursor: pointer;
+
+                    >span {
+                        font-weight: 500;
+                        color: rgb(110, 110, 110);
+                    }
+                    span:last-child {
+                        border-radius: 10px;
+                        padding: 0.25em 0.5em;
+                        font-weight: 500;
+                        color: white;
+                        background-color: rgb(67, 195, 255);
+                    }
+                }
+
+                div:last-child {
+                    border-right: 0px;
+                }
             }
-            ol {
-                list-style: none;
-                li {
-                    margin: 0.5em 0;
+
+            .project_details {
+                top: 0;
+                right: 0;
+                opacity: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(191, 218, 230);
+                border-radius: 30px;
+                box-shadow: 0px 0px 8px 4px rgba(192, 225, 255, 0.5);
+                color: black;
+                box-sizing: border-box;
+                padding: 0.25em 0.75em;
+                display: flex;
+                flex-direction: column;
+                animation-duration: 0.4s;
+                animation-name: showProject;
+
+                a, a:visited {
+                    color: rgb(10, 143, 204);
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+                h3 {
+                    margin: 0;
+                    margin-top: 2em;
+                    font-size: 1.5em;
+                }
+                span {
+                    margin-top: 0.5em;
+                    color: rgb(39, 39, 39);
+                    text-align: justify;
+                }
+                .close_button_container {
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    cursor: pointer;
                 }
             }
         }
-        .chips_container {
-            margin-top: 1%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            gap: 1em;
-        }
-        .chip {
-            color: white;
-            border-radius: 20px;
-            background-color: rgb(67, 195, 255);
-            padding: 0.5em 1em;
-        }
+
     }
 
     >div>span {
@@ -232,5 +305,31 @@
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showProject {
+    0% {
+        opacity: 0;
+        top: 50em;
+        transform-origin: right;
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        top: 0;
+        right: 0;
+        opacity: 1;
+        transform: rotate(0deg);
     }
 }

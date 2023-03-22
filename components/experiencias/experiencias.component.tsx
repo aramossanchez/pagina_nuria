@@ -3,17 +3,19 @@ import style from './experiencias.module.scss';
 import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
 import { useState } from 'react';
 import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
+import { IconSquareRoundedX } from '@tabler/icons-react';
 
 export default function ExperienciasComponent({ previous, next }) {
 
   const [selectedSection, setSelectedSection] = useState('inicio');
+  const [selectedProject, setSelectedProject] = useState('');
 
   return (
     <article className={style.component_container}>
       <Image
         width={250}
         height={250}
-        src={'/pagina_nuria/images/sello.png'}
+        src={'/images/sello.png'}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
@@ -34,27 +36,51 @@ export default function ExperienciasComponent({ previous, next }) {
         </div>
       }
       {
-        selectedSection === 'cumar' &&
-        <div className={style.information_container_job}>
-          <h1>MIS VIAJES</h1>
-          <h2>CUMAR S.L.U</h2>
-          <h6>06/2014 - 09/2017</h6>
-          <div className={style.functions_list}>
-            <span>
-              Funciones a destacar:
-            </span>
-            <ol>
-              <li>Realización de ciclos contables.</li>
-              <li>Contabilidad de facturas con proveedores y clientes.</li>
-              <li>Preparación de impuestos oficiales y créditos bancarios.</li>
-              <li>Elaboración y presentación de cuentas y libros de contabilidad anual.</li>
-              <li>Atención al cliente.</li>
-            </ol>
-          </div>
-          <div className={style.chips_container}>
-            <span className={style.chip}>#administración_financiera</span>
-            <span className={style.chip}>#nóminas</span>
-            <span className={style.chip}>#impuestos</span>
+        selectedSection === 'proyectos' &&
+        <div className={style.information_container_project}>
+          <h1>EXPERIENCIAS</h1>
+          <h2>Proyectos</h2>
+          <div className={style.experiences_list_container}>
+            <div className={style.experiences_list}>
+              <div onClick={() => setSelectedProject('origen')}>
+                <span>PROYECTO ORIGEN</span>
+                <Image
+                  width={250}
+                  height={250}
+                  src={'/images/origen_project.png'}
+                  alt={'Foto de sello'}
+                />
+                <span>+ VER MÁS</span>
+              </div>
+              <div>
+                <span>6FeetRetail</span>
+                <span>+ VER MÁS</span>
+              </div>
+              <div>
+                <span>Diseño actual de la página web de Imaginalia</span>
+                <span>+ VER MÁS</span>
+              </div>
+            </div>
+            {selectedProject === 'origen' &&
+              <div className={style.project_details}>
+                <h3>Proyecto Origen</h3>
+                <Image
+                  width={100}
+                  height={100}
+                  src={'/images/origen_project.png'}
+                  alt={'Foto de sello'}
+                />
+                <span>Dirigido durante mi estancia en <a href="http://www.imaginalia-albacete.com/origen/" target="_blank" rel="noopener noreferrer">Centro Comercial Imaginalia</a>. Implantado en todos los Centros Comerciales gestionados por Cushman & Wakefield a nivel nacional. Proyecto de sostenibilidad y compromiso con el objetivo de mejorar las acciones realizadas por el Centro Comercial cumpliendo con los 17 ODS.</span>
+                <ul>
+                  <li>Campaña de reducción de uso de plásticos <a href="http://www.imaginalia-albacete.com/novedad/campana-de-reduccion-de-uso-de-plasticos/" target="_blank" rel="noopener noreferrer">(link)</a>.</li>
+                  <li>Día del Niño y de la Niña <a href="http://www.imaginalia-albacete.com/novedad/dia-del-nino-y-de-la-nina/" target="_blank" rel="noopener noreferrer">(link)</a></li>
+                  <li>Día Mundial de la Lucha contra el Cáncer de Mama <a href="http://www.imaginalia-albacete.com/novedad/dia-mundial-de-la-lucha-contra-el-cancer-de-mama/" target="_blank" rel="noopener noreferrer">(link)</a></li>
+                </ul>
+                <div className={style.close_button_container} onClick={() => setSelectedProject('')}>
+                  <IconSquareRoundedX color='rgb(67, 195, 255)' size={54} />
+                </div>
+              </div>
+            }
           </div>
         </div>
       }

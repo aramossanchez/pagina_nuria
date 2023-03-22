@@ -9,13 +9,13 @@ export default function PerfilDeViajeraComponent({ next }) {
       <Image
         width={250}
         height={250}
-        src={'/pagina_nuria/images/sello.png'}
+        src={'/images/sello.png'}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
         <Image
           fill
-          src={'/pagina_nuria/images/perfil_viajera.jpg'}
+          src={'/images/perfil_viajera.jpg'}
           alt={'Foto perfil viajera'}
         />
       </div>

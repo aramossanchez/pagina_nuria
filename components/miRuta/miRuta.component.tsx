@@ -13,20 +13,20 @@ export default function MiRutaComponent({ previous, next }) {
       <Image
         width={250}
         height={250}
-        src={'/pagina_nuria/images/sello.png'}
+        src={'/images/sello.png'}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
         <Image
           fill
-          src={'/pagina_nuria/images/camino_mis_viajes.png'}
+          src={'/images/camino_mis_viajes.png'}
           alt={'Foto perfil viajera'}
         />
         <div className={style.section_selector_container}>
           <Image
             width={50}
             height={50}
-            src={'/pagina_nuria/images/googlemaps.svg'}
+            src={'/images/googlemaps.svg'}
             alt={'Foto perfil viajera'}
             onClick={() => setSelectedSection('final')}
           />

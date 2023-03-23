@@ -3,7 +3,7 @@ import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
 import MiRutaComponent from '../../components/miRuta/miRuta.component';
 import ExperienciasComponent from '../../components/experiencias/experiencias.component';
-import { IconEPassport, IconFriends, IconGps, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
+import { IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 
 export default function IndexContainer() {
 
@@ -29,6 +29,9 @@ export default function IndexContainer() {
       <article className={style.presentation_container}>
         <div className={style.background_image}></div>
         <div className={style.header_mobile}>
+          <div>
+            <IconHome2 />
+          </div>
           <span>Nuria Zamora Fernandez</span>
           <div>
             <IconMessage />

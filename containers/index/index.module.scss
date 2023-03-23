@@ -263,7 +263,13 @@
                 font-weight: 500;
                 font-size: 1.2em;
             }
-            div {
+            div:first-child {
+                position: absolute;
+                top: 0.6em;
+                left: 0.5em;
+                cursor: pointer;
+            }
+            div:last-child {
                 position: absolute;
                 top: 0.6em;
                 right: 0.5em;
@@ -341,7 +347,7 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            margin: 2em 0 4em 0; 
+            margin: 2em 0 6em 0; 
             width: 100vw;
             color: black;
             overflow-y: scroll;

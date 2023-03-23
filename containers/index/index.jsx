@@ -3,10 +3,10 @@ import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
 import MiRutaComponent from '../../components/miRuta/miRuta.component';
 import ExperienciasComponent from '../../components/experiencias/experiencias.component';
+import { IconEPassport, IconFriends, IconGps, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 
 export default function IndexContainer() {
 
-  const [menuOpen, setMenuOpen] = useState(false);
   const [popUpSelected, setPopUpSelected] = useState('');
 
   return (
@@ -28,23 +28,34 @@ export default function IndexContainer() {
       }
       <article className={style.presentation_container}>
         <div className={style.background_image}></div>
-        <div className={style.button_menu_navigation_container}>
-          <div
-            className={menuOpen ? style.button_menu_navigation_open : style.button_menu_navigation_closed}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <div></div>
-            <div></div>
-            <div></div>
+        <div className={style.header_mobile}>
+          <span>Nuria Zamora Fernandez</span>
+          <div>
+            <IconMessage />
           </div>
         </div>
-        <header className={menuOpen ? style.header_open : style.header_closed}>
+        <header>
           <ul>
-            <li onClick={() => setPopUpSelected('perfilDeViajera')} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>Perfil de viajera</li>
-            <li onClick={() => setPopUpSelected('miRuta')} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>Mi ruta</li>
-            <li onClick={() => setPopUpSelected('eventosYCampañas')} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>Experiencias</li>
-            <li>Habilidades</li>
-            <li>Compañeros de viaje</li>
+            <li onClick={() => setPopUpSelected('perfilDeViajera')} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>
+              <div><IconTrekking /></div>
+              <span>Perfil de viajera</span>
+            </li>
+            <li onClick={() => setPopUpSelected('miRuta')} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>
+              <div><IconGps /></div>
+              <span>Mi ruta</span>
+            </li>
+            <li onClick={() => setPopUpSelected('eventosYCampañas')} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>
+              <div><IconEPassport /></div>
+              <span>Experiencias</span>
+            </li>
+            <li onClick={() => setPopUpSelected('habilidades')} className={popUpSelected === 'habilidades' ? style.menu_link_selected : null}>
+              <div><IconLuggage /></div>
+              <span>Habilidades</span>
+            </li>
+            <li onClick={() => setPopUpSelected('compañerosDeViaje')} className={popUpSelected === 'compañerosDeViaje' ? style.menu_link_selected : null}>
+              <div><IconFriends /></div>
+              <span>Compañeros de viaje</span>
+            </li>
           </ul>
         </header>
         <div className={style.text_presentation_container}>
@@ -54,6 +65,44 @@ export default function IndexContainer() {
           <article className={style.buttons_presentation_container}>
             <div>¿Hablamos?</div>
           </article>
+        </div>
+        <div className={style.text_presentation_container_mobile}>
+          <div>
+            <h1>¡Hola! ¿Quieres viajar conmigo?</h1>
+            <span>Acompáñame en este viaje y descubre todas mis experiencias</span>
+          </div>
+          <div className={style.sections_container}>
+            <div className={style.section_index_mobile}>
+              <div><IconTrekking size={56} color='rgb(67, 195, 255)' /></div>
+              <h2>Perfil de viajera</h2>
+              <span>Una breve descripción sobre la sección Perfil de viajera</span>
+              <span>+ VER MAS</span>
+            </div>
+            <div className={style.section_index_mobile}>
+              <div><IconGps size={56} color='rgb(67, 195, 255)' /></div>
+              <h2>Mi ruta</h2>
+              <span>Una breve descripción sobre la sección Mi ruta</span>
+              <span>+ VER MAS</span>
+            </div>
+            <div className={style.section_index_mobile}>
+              <div><IconEPassport size={56} color='rgb(67, 195, 255)' /></div>
+              <h2>Experiencias</h2>
+              <span>Una breve descripción sobre la sección Experiencias</span>
+              <span>+ VER MAS</span>
+            </div>
+            <div className={style.section_index_mobile}>
+              <div><IconLuggage size={56} color='rgb(67, 195, 255)' /></div>
+              <h2>Habilidades</h2>
+              <span>Una breve descripción sobre la sección Habilidades</span>
+              <span>+ VER MAS</span>
+            </div>
+            <div className={style.section_index_mobile}>
+              <div><IconFriends size={56} color='rgb(67, 195, 255)' /></div>
+              <h2>Compañeros de viaje</h2>
+              <span>Una breve descripción sobre la sección Compañeros de viaje</span>
+              <span>+ VER MAS</span>
+            </div>
+          </div>
         </div>
       </article>
     </section >

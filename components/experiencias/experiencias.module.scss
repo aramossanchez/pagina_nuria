@@ -291,6 +291,39 @@
             padding: 0.5em 1em;
             margin-right: 2em;
         }
+        .experiences_list {
+            display: flex;
+            flex-direction: column;
+            background-color: red;
+            width: 200px;
+
+            div {
+                border-right: 1px solid rgb(110, 110, 110);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                color: black;
+                cursor: pointer;
+
+                >span {
+                    font-weight: 500;
+                    color: rgb(110, 110, 110);
+                }
+                span:last-child {
+                    border-radius: 10px;
+                    padding: 0.25em 0.5em;
+                    font-weight: 500;
+                    color: white;
+                    background-color: rgb(67, 195, 255);
+                }
+            }
+
+            div:last-child {
+                border-right: 0px;
+            }
+        }
     }
 }
 

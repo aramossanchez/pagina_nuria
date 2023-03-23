@@ -341,7 +341,7 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            margin: 2em 0; 
+            margin: 2em 0 4em 0; 
             width: 100vw;
             color: black;
             overflow-y: scroll;
@@ -385,15 +385,15 @@
                         cursor: pointer;
                     }
                 }
-
+                .section_index_mobile:last-child {
+                    border-bottom: none;
+                }
             }
         }
     }
 }
 
 @media (max-width: 500px) {
-    .presentation_container {
-    }
 }
 
 

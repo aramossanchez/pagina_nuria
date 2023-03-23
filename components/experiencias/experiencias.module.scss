@@ -153,6 +153,7 @@
             position: relative;
 
             .experiences_list {
+                width: 100%;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
 
@@ -209,7 +210,7 @@
                 }
                 h3 {
                     margin: 0;
-                    margin-top: 2em;
+                    margin-top: 1em;
                     font-size: 1.5em;
                 }
                 span {
@@ -294,7 +295,6 @@
         .experiences_list {
             display: flex;
             flex-direction: column;
-            background-color: red;
             width: 200px;
 
             div {

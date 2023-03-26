@@ -6,6 +6,7 @@ import ExperienciasComponent from '../../components/experiencias/experiencias.co
 import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 import IndexMobileContainer from '../indexMobile/indexMobile';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
+import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
 
 export default function IndexContainer() {
 
@@ -99,7 +100,7 @@ export default function IndexContainer() {
             <PerfilDeViajeraMovilComponent />
           }
           {popUpSelected === 'miRuta' &&
-            <PerfilDeViajeraMovilComponent />
+            <MiRutaMovilContainerContainer />
           }
         </div>
       </article>

@@ -8,7 +8,7 @@ export default function PerfilDeViajeraMovilComponent() {
       <div className={style.img_container}>
         <Image
           fill
-          src={'/images/perfil_viajera.jpg'}
+          src={'/pagina_nuria/images/perfil_viajera.jpg'}
           alt={'Foto perfil viajera'}
         />
       </div>

@@ -27,7 +27,7 @@ export default function MiRutaMovilContainer() {
         <Image
           fill
           src={'/pagina_nuria/images/camino_mis_viajes.png'}
-          alt={'Foto perfil viajera'}
+          alt={'Foto mi ruta'}
         />
       </div>
       <h1>MI RUTA</h1>

@@ -4,7 +4,7 @@ import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeV
 import MiRutaComponent from '../../components/miRuta/miRuta.component';
 import ExperienciasComponent from '../../components/experiencias/experiencias.component';
 import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
-import IndexMobileContainer from '../indexMobile/indexMobile';
+import IndexMobileContainer from '../indexMobile/indexMobile.tsx';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
 import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
 

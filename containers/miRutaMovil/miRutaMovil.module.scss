@@ -37,7 +37,16 @@
                 text-decoration: none;
                 font-weight: 600;
                 white-space: nowrap;
-                padding: 1em 0;
+                padding: 0.25em 0.5em;
+                margin: calc(0.5em + 2px) 0;
+                border: 2px solid white;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: white;
+                    color: var(--primaryColor);
+                }
+        
             }
 
             .white_opacity_right, .white_opacity_left {

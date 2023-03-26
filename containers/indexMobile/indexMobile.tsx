@@ -14,31 +14,31 @@ export default function IndexMobileContainer({ setPopUpSelected1, setPopUpSelect
           <div><IconTrekking size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Perfil de viajera</h2>
           <span>Una breve descripción sobre la sección Perfil de viajera</span>
-          <span onClick={setPopUpSelected1} >+ VER MAS</span>
+          <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected1();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>
           <div><IconGps size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Mi ruta</h2>
           <span>Una breve descripción sobre la sección Mi ruta</span>
-          <span onClick={setPopUpSelected2}>+ VER MAS</span>
+          <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected2();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>
           <div><IconEPassport size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Experiencias</h2>
           <span>Una breve descripción sobre la sección Experiencias</span>
-          <span onClick={setPopUpSelected3}>+ VER MAS</span>
+          <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected3();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>
           <div><IconLuggage size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Habilidades</h2>
           <span>Una breve descripción sobre la sección Habilidades</span>
-          <span onClick={setPopUpSelected4}>+ VER MAS</span>
+          <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected4();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>
           <div><IconFriends size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Compañeros de viaje</h2>
           <span>Una breve descripción sobre la sección Compañeros de viaje</span>
-          <span onClick={setPopUpSelected5}>+ VER MAS</span>
+          <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected5();}}>+ VER MAS</span>
         </div>
       </div>
     </div>

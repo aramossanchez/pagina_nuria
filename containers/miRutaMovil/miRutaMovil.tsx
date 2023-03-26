@@ -22,6 +22,8 @@ export default function MiRutaMovilContainer() {
         <Link href="/#destino" scroll={false}>
           Destino
         </Link>
+        <div className={style.white_opacity_right}>asd</div>
+        <div className={style.white_opacity_left}>asd</div>
       </div>
       <div className={style.img_container}>
         <Image

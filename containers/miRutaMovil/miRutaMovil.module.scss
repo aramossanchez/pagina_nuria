@@ -22,7 +22,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 0.5em 0.75em;
+            padding: 0 0.75em;
             gap: 1.5em;
             overflow-x: scroll;
 
@@ -32,6 +32,22 @@
                 text-decoration: none;
                 font-weight: 500;
                 white-space: nowrap;
+            }
+
+            .white_opacity_right, .white_opacity_left {
+                position: fixed;
+                top: 2.8em;
+                width: 0.75em;
+                background-color: var(--primaryColor);
+                color: transparent;
+                opacity: 0.7;
+            }
+
+            .white_opacity_right {
+                right: 0;
+            }
+            .white_opacity_left {
+                left: 0;
             }
         }
 

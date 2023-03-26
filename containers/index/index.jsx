@@ -56,23 +56,23 @@ export default function IndexContainer() {
         </div>
         <header>
           <ul>
-            <li onClick={() => setPopUpSelected('perfilDeViajera')} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>
+            <li onClick={() => {setPopUpSelected('perfilDeViajera'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>
               <div><IconTrekking /></div>
               <span>Perfil de viajera</span>
             </li>
-            <li onClick={() => setPopUpSelected('miRuta')} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>
+            <li onClick={() => {setPopUpSelected('miRuta'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>
               <div><IconGps /></div>
               <span>Mi ruta</span>
             </li>
-            <li onClick={() => setPopUpSelected('eventosYCampañas')} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>
+            <li onClick={() => {setPopUpSelected('eventosYCampañas'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>
               <div><IconEPassport /></div>
               <span>Experiencias</span>
             </li>
-            <li onClick={() => setPopUpSelected('habilidades')} className={popUpSelected === 'habilidades' ? style.menu_link_selected : null}>
+            <li onClick={() => {setPopUpSelected('habilidades'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'habilidades' ? style.menu_link_selected : null}>
               <div><IconLuggage /></div>
               <span>Habilidades</span>
             </li>
-            <li onClick={() => setPopUpSelected('compañerosDeViaje')} className={popUpSelected === 'compañerosDeViaje' ? style.menu_link_selected : null}>
+            <li onClick={() => {setPopUpSelected('compañerosDeViaje'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'compañerosDeViaje' ? style.menu_link_selected : null}>
               <div><IconFriends /></div>
               <span>Compañeros de viaje</span>
             </li>

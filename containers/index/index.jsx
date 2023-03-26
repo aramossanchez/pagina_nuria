@@ -1,15 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
 import MiRutaComponent from '../../components/miRuta/miRuta.component';
 import ExperienciasComponent from '../../components/experiencias/experiencias.component';
-import { IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
+import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 import IndexMobileContainer from '../indexMobile/indexMobile';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
 
 export default function IndexContainer() {
 
   const [popUpSelected, setPopUpSelected] = useState('');
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpieza al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <section>
@@ -84,8 +98,14 @@ export default function IndexContainer() {
           {popUpSelected === 'perfilDeViajera' &&
             <PerfilDeViajeraMovilComponent />
           }
+          {popUpSelected === 'miRuta' &&
+            <PerfilDeViajeraMovilComponent />
+          }
         </div>
       </article>
+      <div onClick={() => document.documentElement.scrollTop = 0} className={scrollY > 350 ? style.arrow_to_up_show : style.arrow_to_up_closed}>
+        <IconArrowBigUpFilled />
+      </div>
     </section >
   );
 }

@@ -1,3 +1,7 @@
+.arrow_to_up_show, .arrow_to_up_closed {
+    display: none;
+}
+
 .popups_container {
     position: absolute;
     z-index: 10;
@@ -182,6 +186,7 @@
             }
         }
     }
+
     .container_section_mobile {
         display: none;
     }
@@ -204,6 +209,35 @@
 }
 
 @media (max-width: 873px) {
+    .arrow_to_up_show, .arrow_to_up_closed {
+        position: fixed;
+        bottom: 7em;
+        right: 1em;
+        background-color: var(--primaryColor);
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        color: white;
+        animation-duration: 0.5s;
+        animation-name: showArrowUp;
+    }
+    .arrow_to_up_show {
+        animation-duration: 0.5s;
+        animation-name: showArrowUp;
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .arrow_to_up_closed {
+        animation-duration: 0.5s;
+        animation-name: closeArrowUp;
+        width: 0;
+        height: 0;
+    }
+
     .popups_container {
         display: none;
     }
@@ -224,16 +258,19 @@
             position: fixed;
             top: 0;
             left: 0;
+
             span {
                 font-weight: 500;
                 font-size: 1.2em;
             }
+
             div:first-child {
                 position: absolute;
                 top: 0.6em;
                 left: 0.5em;
                 cursor: pointer;
             }
+
             div:last-child {
                 position: absolute;
                 top: 0.6em;
@@ -305,9 +342,11 @@
         .text_presentation_container {
             display: none;
         }
+
         .background_image {
             display: none;
         }
+
         .container_section_mobile {
             display: flex;
             flex-direction: column;
@@ -315,11 +354,36 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) {}
+
+
+
+@keyframes showArrowUp {
+    from {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 2.5em;
+        height: 2.5em;
+    }
 }
+@keyframes closeArrowUp {
+    from {
+        opacity: 1;
+        width: 2.5em;
+        height: 2.5em;
+    }
 
-
-
+    to {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
 @keyframes showPopup {
     from {
         left: 200%;

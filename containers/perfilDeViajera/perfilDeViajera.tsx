@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import style from './perfilDeViajera.module.scss';
-import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
+import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
 
 export default function PerfilDeViajeraComponent({ next }) {
 

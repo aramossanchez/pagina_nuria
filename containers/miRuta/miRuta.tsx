@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import style from './miRuta.module.scss';
-import ButtonArrowRightComponent from '../buttonArrowRight/buttonArrowRight.component';
+import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
 import { useState } from 'react';
-import ButtonArrowLeftComponent from '../buttonArrowLeft/buttonArrowLeft.component';
+import ButtonArrowLeftComponent from '../../components/buttonArrowLeft/buttonArrowLeft.component';
 
 export default function MiRutaComponent({ previous, next }) {
 

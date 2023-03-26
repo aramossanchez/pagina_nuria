@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import style from './index.module.scss';
-import PerfilDeViajeraComponent from '../../components/perfilDeViajera/perfilDeViajera.component';
-import MiRutaComponent from '../../components/miRuta/miRuta.component';
-import ExperienciasComponent from '../../components/experiencias/experiencias.component';
+import PerfilDeViajeraComponent from '../perfilDeViajera/perfilDeViajera';
+import MiRutaComponent from '../miRuta/miRuta.tsx';
+import ExperienciasComponent from '../experiencias/experiencias.tsx';
 import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 import IndexMobileContainer from '../indexMobile/indexMobile.tsx';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';

@@ -1,0 +1,85 @@
+.mobile_container {
+    opacity: 0;
+}
+
+@media (max-width: 873px) {
+        .mobile_container {
+            opacity: 1;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            margin: 2em 0 6em 0; 
+            width: 100vw;
+            color: black;
+            overflow-y: scroll;
+            >div:first-child {
+                padding: 1em 0.5em;
+                background-image: url('/pagina_nuria/images/background_index_header.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll !important;
+                color: white;
+                min-height: 500px !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.8em;
+                }
+                >span {
+                    text-align: center;
+                }
+            }
+
+            .sections_container {
+                padding: 1em 0.5em;
+                .section_index_mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    padding: 1em 0 2em 0;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+                    span:last-child {
+                        font-size: 0.8em;
+                        background-color: var(--primaryColor);
+                        color: white;
+                        padding: 0.25em 0.7em;
+                        border-radius: 10px;
+                        margin-top: 1em;
+                        cursor: pointer;
+                    }
+                }
+                .section_index_mobile:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+}
+
+@media (max-width: 500px) {
+}
+
+
+
+@keyframes showPopup {
+    from {
+        left: 200%;
+    }
+
+    to {
+        left: 10%
+    }
+}
+
+@keyframes showPopupMovil {
+    from {
+        left: 200%;
+    }
+
+    to {
+        left: 2%
+    }
+}

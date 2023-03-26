@@ -1,0 +1,46 @@
+import style from './indexMobile.module.scss';
+import { IconEPassport, IconFriends, IconGps, IconLuggage, IconTrekking } from '@tabler/icons-react';
+
+export default function IndexMobileContainer({ setPopUpSelected1, setPopUpSelected2, setPopUpSelected3, setPopUpSelected4, setPopUpSelected5}) {
+
+  return (
+    <div className={style.mobile_container}>
+      <div>
+        <h1>¡Hola! ¿Quieres viajar conmigo?</h1>
+        <span>Acompáñame en este viaje y descubre todas mis experiencias</span>
+      </div>
+      <div className={style.sections_container}>
+        <div className={style.section_index_mobile}>
+          <div><IconTrekking size={56} color='rgb(67, 195, 255)' /></div>
+          <h2>Perfil de viajera</h2>
+          <span>Una breve descripción sobre la sección Perfil de viajera</span>
+          <span onClick={setPopUpSelected1} >+ VER MAS</span>
+        </div>
+        <div className={style.section_index_mobile}>
+          <div><IconGps size={56} color='rgb(67, 195, 255)' /></div>
+          <h2>Mi ruta</h2>
+          <span>Una breve descripción sobre la sección Mi ruta</span>
+          <span onClick={setPopUpSelected2}>+ VER MAS</span>
+        </div>
+        <div className={style.section_index_mobile}>
+          <div><IconEPassport size={56} color='rgb(67, 195, 255)' /></div>
+          <h2>Experiencias</h2>
+          <span>Una breve descripción sobre la sección Experiencias</span>
+          <span onClick={setPopUpSelected3}>+ VER MAS</span>
+        </div>
+        <div className={style.section_index_mobile}>
+          <div><IconLuggage size={56} color='rgb(67, 195, 255)' /></div>
+          <h2>Habilidades</h2>
+          <span>Una breve descripción sobre la sección Habilidades</span>
+          <span onClick={setPopUpSelected4}>+ VER MAS</span>
+        </div>
+        <div className={style.section_index_mobile}>
+          <div><IconFriends size={56} color='rgb(67, 195, 255)' /></div>
+          <h2>Compañeros de viaje</h2>
+          <span>Una breve descripción sobre la sección Compañeros de viaje</span>
+          <span onClick={setPopUpSelected5}>+ VER MAS</span>
+        </div>
+      </div>
+    </div>
+  );
+}

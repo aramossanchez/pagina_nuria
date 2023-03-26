@@ -1,4 +1,5 @@
 .component_container {
+    opacity: 1;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -69,60 +70,6 @@
 
 @media (max-width: 873px) {
     .component_container {
-        font-size: 12px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 80%;
-        height: 100%;
-        gap: 3em;
-        position: relative;
-        padding: 2em 2em 0 2.5em;
-        flex-wrap: wrap;
-
-        img:first-child {
-            position: absolute;
-            right: -5em;
-            top: -7%;
-            opacity: 0.6;
-        }
-
-        >img:nth-child(2) {
-            position: absolute !important;
-            width: 50% !important;
-            height: 40% !important;
-        }
-
-        span:last-child {
-            margin-top: 2em;
-        }
-
-        h1 {
-            font-size: 3em;
-            width: 100%;
-            text-align: center;
-            margin-top: 5%;
-        }
-
-        >div {
-            height: calc(100% - 5em);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        >div>span {
-            text-align: justify;
-            color: grey;
-        }
-
-        .chip {
-            color: white;
-            border-radius: 20px;
-            background-color: rgb(67, 195, 255);
-            padding: 0.5em 1em;
-            margin-right: 2em;
-        }
+        opacity: 0;
     }
 }

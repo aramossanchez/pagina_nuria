@@ -8,7 +8,7 @@ export default function MiRutaMovilContainer() {
     <article className={style.component_container}>
       <div className={style.miRutaMovil_links}>
         <Link href="/#inicio" scroll={false}>
-          Inicio
+          Agradecimientos
         </Link>
         <Link href="/#cumar" scroll={false}>
           Cumar

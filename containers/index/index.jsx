@@ -7,6 +7,7 @@ import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, I
 import IndexMobileContainer from '../indexMobile/indexMobile.tsx';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
 import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
+import HabilidadesComponent from '../habilidades/habilidades';
 
 export default function IndexContainer() {
 
@@ -39,7 +40,10 @@ export default function IndexContainer() {
             <MiRutaComponent previous={() => setPopUpSelected('perfilDeViajera')} next={() => setPopUpSelected('eventosYCampañas')} />
           </div>
           <div className={popUpSelected === 'eventosYCampañas' ? style.popup_container_active : style.popup_container_hide}>
-            <ExperienciasComponent previous={() => setPopUpSelected('miRuta')} next={() => setPopUpSelected('eventosYCampañas')} />
+            <ExperienciasComponent previous={() => setPopUpSelected('miRuta')} next={() => setPopUpSelected('habilidades')} />
+          </div>
+          <div className={popUpSelected === 'habilidades' ? style.popup_container_active : style.popup_container_hide}>
+            <HabilidadesComponent previous={() => setPopUpSelected('eventosYCampañas')} next={() => setPopUpSelected('compañeros')} />
           </div>
         </div>
       }

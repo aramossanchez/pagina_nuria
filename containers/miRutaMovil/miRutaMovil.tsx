@@ -42,7 +42,7 @@ export default function MiRutaMovilContainer() {
         <h2>¡GRACIAS, DE VERDAD!</h2>
       </div>
       <div id='cumar' className={style.destiny_link}></div>
-      <div className={style.information_container_job}>
+      <div className={style.mi_ruta_container_job}>
         <h2>CUMAR S.L.U</h2>
         <h6>06/2014 - 09/2017</h6>
         <div className={style.functions_list}>
@@ -64,7 +64,7 @@ export default function MiRutaMovilContainer() {
         </div>
       </div>
       <div id='imaginalia' className={style.destiny_link}></div>
-      <div className={style.information_container_job}>
+      <div className={style.mi_ruta_container_job}>
         <h2>CENTRO COMERCIAL IMAGINALIA</h2>
         <h6>05/2018 - 09/2022</h6>
         <div className={style.functions_list}>
@@ -90,7 +90,7 @@ export default function MiRutaMovilContainer() {
         </div>
       </div>
       <div id='manchuela' className={style.destiny_link}></div>
-      <div className={style.information_container_job}>
+      <div className={style.mi_ruta_container_job}>
         <h2>DENOMINACIÓN DE ORIGEN MANCHUELA</h2>
         <h6>10/2022 - 02/2023</h6>
         <div className={style.functions_list}>

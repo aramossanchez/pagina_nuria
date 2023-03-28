@@ -112,8 +112,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>Diseño actual de la página web de Imaginalia - App móvil y línea gráfica</h3>
                 <Image
-                  width={250}
-                  height={250}
+                  width={160}
+                  height={160}
                   src={'/images/webImaginalia.png'}
                   alt={'Foto de sello'}
                 />
@@ -169,8 +169,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>1º Imaginalia Summer Fest</h3>
                 <Image
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                   src={'/images/summerFest.png'}
                   alt={'Foto de sello'}
                 />
@@ -184,8 +184,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>Feria de Albacete</h3>
                 <Image
-                  width={150}
-                  height={150}
+                  width={120}
+                  height={120}
                   src={'/images/feriaAlbacete.png'}
                   alt={'Foto de sello'}
                 />
@@ -256,8 +256,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>Cata-Show &quot;Tinta Blanca&quot;</h3>
                 <Image
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   src={'/images/cataShow.png'}
                   alt={'Foto de sello'}
                 />
@@ -271,8 +271,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>Black Friday</h3>
                 <Image
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   src={'/images/blackFriday.png'}
                   alt={'Foto de sello'}
                 />
@@ -286,8 +286,8 @@ export default function ExperienciasComponent({ previous, next }) {
               <div className={style.project_details}>
                 <h3>Navidad</h3>
                 <Image
-                  width={200}
-                  height={200}
+                  width={150}
+                  height={150}
                   src={'/images/navidad.png'}
                   alt={'Foto de sello'}
                 />

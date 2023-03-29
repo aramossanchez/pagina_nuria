@@ -45,6 +45,34 @@
         max-height: 0px;
         max-width: 0px;
     }
+
+
+    .hablamos_container_active,
+    .hablamos_container_hide {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        background-color: rgb(255, 255, 255);
+        color: var(--primaryColor);
+        box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.089);
+        border-radius: 10px;
+        z-index: 9;
+    }
+
+    .hablamos_container_active {
+        animation-duration: 0.5s;
+        animation-name: showHablamos;
+    }
+
+    .hablamos_container_hide {
+        display: none;
+        position: absolute;
+        left: 200%;
+        max-height: 0px;
+        max-width: 0px;
+    }
 }
 
 .presentation_container {
@@ -393,13 +421,12 @@
         left: 10%
     }
 }
-
-@keyframes showPopupMovil {
+@keyframes showHablamos {
     from {
         left: 200%;
     }
 
     to {
-        left: 2%
+        left: 25%
     }
 }

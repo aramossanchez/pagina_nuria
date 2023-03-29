@@ -1,0 +1,67 @@
+.component_container {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    overflow: hidden;
+    .svg_container_1 {
+        position: absolute;
+        right: -13em;
+        top: 1em;
+        transform: rotate(60deg);
+    }
+    .svg_container_2 {
+        position: absolute;
+        right: -10em;
+        top: -16em;
+    }
+    h2 {
+        font-size: 3em;
+        font-weight: 600;
+        margin: 0;
+        color: black;
+        margin-bottom: 0.1em;
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin: 0;
+        color: rgba(0, 0, 0, 0.534);
+        margin-bottom: 4em;
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        margin-top: 1.5em;
+        font-size: 1.2em;
+        color: black;
+        font-weight: 500;
+        >div {
+            font-size: 1em;
+            margin-top: 0;
+            gap: 0.2em;
+        }
+        svg {
+            color: rgba(0, 0, 0, 0.534);
+        }
+        a, a:visited {
+            color: rgb(10, 143, 204);
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 873px) {
+    .component_container {
+        opacity: 0;
+    }
+}

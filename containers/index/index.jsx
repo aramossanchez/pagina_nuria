@@ -8,6 +8,7 @@ import IndexMobileContainer from '../indexMobile/indexMobile.tsx';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
 import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
 import HabilidadesComponent from '../habilidades/habilidades';
+import HablamosComponent from '../hablamos/hablamos';
 
 export default function IndexContainer() {
 
@@ -33,6 +34,9 @@ export default function IndexContainer() {
 
         <div className={`${style.popups_container}`}>
           <div className={style.close_popup} onClick={() => setPopUpSelected('')}></div>
+          <div className={popUpSelected === 'hablamos' ? style.hablamos_container_active : style.hablamos_container_hide}>
+            <HablamosComponent />
+          </div>
           <div className={popUpSelected === 'perfilDeViajera' ? style.popup_container_active : style.popup_container_hide}>
             <PerfilDeViajeraComponent next={() => setPopUpSelected('miRuta')} />
           </div>
@@ -87,7 +91,7 @@ export default function IndexContainer() {
           <span>Acompáñame en este viaje y descubre todas mis experiencias</span>
           <span>#marketing - #eventos - #dirección</span>
           <article className={style.buttons_presentation_container}>
-            <div>¿Hablamos?</div>
+            <div onClick={() => setPopUpSelected('hablamos')}>¿Hablamos?</div>
           </article>
         </div>
         <div className={style.container_section_mobile}>

@@ -3,8 +3,12 @@ import style from './habilidades.module.scss';
 import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
 import { IconBook, IconBulbFilled, IconHeart, IconMicrophone2, IconMilitaryRank, IconRocket, IconSettingsFilled, IconUsers } from '@tabler/icons-react';
 import ButtonArrowLeftComponent from '@/components/buttonArrowLeft/buttonArrowLeft.component';
+import { useState } from 'react';
+import LoaderComponent from '@/components/loader/loader.component';
 
 export default function HabilidadesComponent({ previous, next }) {
+
+  const [loading, setLoading] = useState(true);
 
   return (
     <article className={style.component_container}>
@@ -15,10 +19,12 @@ export default function HabilidadesComponent({ previous, next }) {
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
+        {loading && <LoaderComponent />}
         <Image
           fill
           src={'/images/maleta.png'}
           alt={'Foto de maleta'}
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <div className={style.information_container}>

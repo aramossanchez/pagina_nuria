@@ -1,8 +1,12 @@
+import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import style from './miRutaMovil.module.scss';
 
 export default function MiRutaMovilContainer() {
+
+  const [loading, setLoading] = useState(true);
 
   return (
     <article className={style.component_container}>
@@ -26,10 +30,12 @@ export default function MiRutaMovilContainer() {
         <div className={style.white_opacity_left}>asd</div>
       </div>
       <div className={style.img_container}>
+        {loading && <LoaderComponent />}
         <Image
           fill
           src={'/pagina_nuria/images/camino_mis_viajes.png'}
           alt={'Foto mi ruta'}
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <h1>MI RUTA</h1>

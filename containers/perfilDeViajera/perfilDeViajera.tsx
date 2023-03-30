@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import style from './perfilDeViajera.module.scss';
 import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
+import LoaderComponent from '@/components/loader/loader.component';
+import { useState } from 'react';
 
 export default function PerfilDeViajeraComponent({ next }) {
+
+  const [loading, setLoading] = useState(true);
 
   return (
     <article className={style.component_container}>
@@ -13,10 +17,12 @@ export default function PerfilDeViajeraComponent({ next }) {
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
+        {loading && <LoaderComponent />}
         <Image
           fill
           src={'/images/perfil_viajera.jpg'}
           alt={'Foto perfil viajera'}
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <div className={style.information_container}>

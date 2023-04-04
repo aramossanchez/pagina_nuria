@@ -9,6 +9,7 @@ import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/per
 import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
 import HabilidadesComponent from '../habilidades/habilidades';
 import HablamosComponent from '../hablamos/hablamos';
+import ExperienciasMovilContainer from '../experienciasMovil/experienciasMovil';
 
 export default function IndexContainer() {
 
@@ -109,6 +110,9 @@ export default function IndexContainer() {
           }
           {popUpSelected === 'miRuta' &&
             <MiRutaMovilContainerContainer />
+          }
+          {popUpSelected === 'eventosYCampañas' &&
+            <ExperienciasMovilContainer />
           }
         </div>
       </article>

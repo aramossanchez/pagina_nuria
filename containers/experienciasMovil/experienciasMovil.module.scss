@@ -1,0 +1,233 @@
+.component_container {
+    opacity: 0;
+}
+
+@media (max-width: 873px) {
+    .component_container {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 6.8em;
+
+        .miRutaMovil_links {
+            z-index: 10;
+            box-sizing: border-box;
+            width: 100%;
+            position: fixed;
+            white-space: nowrap;
+            top: 2.8em;
+            left: 0;
+            background-color: var(--primaryColor);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 1.75em;
+            gap: 1.5em;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0px;
+                height: 0px;
+            }
+
+            a,
+            a:visited {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                white-space: nowrap;
+                padding: 0.25em 0.5em;
+                margin: calc(0.5em + 2px) 0;
+                border: 2px solid white;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: white;
+                    color: var(--primaryColor);
+                }
+
+            }
+
+            .white_opacity_right,
+            .white_opacity_left {
+                position: fixed;
+                top: 2.7em;
+                width: 1.75em;
+                background-color: var(--primaryColor);
+                color: transparent;
+                opacity: 0.7;
+                padding: 1em 0;
+            }
+
+            .white_opacity_right {
+                right: 0;
+            }
+
+            .white_opacity_left {
+                left: 0;
+            }
+        }
+
+        .img_container {
+            width: 100%;
+            position: relative;
+
+            >img:first-child {
+                position: relative !important;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            width: 100%;
+            text-align: center;
+            margin-top: 5%;
+            color: var(--primaryColor);
+        }
+
+        .destiny_link {
+            margin-bottom: 5.3em;
+        }
+
+
+        .experiencia_container {
+            width: 100vw;
+            overflow-x: hidden;
+            box-sizing: border-box;
+
+            h2 {
+                padding-left: 0.5em;
+            }
+
+            .slider_container {
+                margin-top: 2em;
+                width: 100vw;
+                overflow-x: scroll;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .slider_card_container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    min-width: 100%;
+
+                    .slider_card {
+                        max-width: 70vw;
+                        min-width: 70vw;
+                        padding: 2em 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        border-left: 2px solid rgba(128, 128, 128, 0.322);
+                        border-right: 2px solid rgba(128, 128, 128, 0.322);
+
+                        >span:last-child {
+                            border-radius: 10px;
+                            padding: 0.25em 0.5em;
+                            font-weight: 500;
+                            color: white;
+                            background-color: rgb(67, 195, 255);
+                        }
+
+                    }
+
+                    span {
+                        font-weight: 600;
+                        color: black;
+                        margin-bottom: 0.5em;
+                        white-space: wrap;
+                        text-align: center;
+                    }
+
+                }
+            }
+        }
+
+        .points_slider_container {
+            margin-top: 1em;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+
+            svg {
+                color: var(--primaryColor);
+            }
+        }
+
+        h1 {
+            margin: 0;
+            margin-top: 5%;
+        }
+
+        h2 {
+            color: grey;
+            width: 100%;
+            text-align: left;
+            font-size: 2em;
+            margin-bottom: 0.25em;
+        }
+
+        h6 {
+            color: rgba(128, 128, 128, 0.5);
+            font-size: 0.9em;
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+
+        .functions_list {
+            margin-top: 2%;
+            color: grey;
+
+            span {
+                font-weight: 600;
+            }
+
+            ol {
+                list-style: none;
+                padding: 0 1em;
+
+                li {
+                    margin: 0.5em 0;
+                }
+            }
+        }
+
+        .chips_container {
+            margin-top: 1%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .chip {
+            color: white;
+            border-radius: 20px;
+            background-color: rgb(67, 195, 255);
+            padding: 0.5em 1em;
+        }
+
+        .information_container_inicio:last-child {
+            border-bottom: none;
+            padding-bottom: 8em;
+        }
+
+        >div>span {
+            text-align: justify;
+            color: grey;
+        }
+    }
+}

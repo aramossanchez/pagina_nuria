@@ -1,10 +1,14 @@
-import { getExperienciasEventos, getExperienciasProyectos } from '@/services/experiencias.service';
+import { getExperienciasCampañasOffline, getExperienciasCampañasOnline, getExperienciasEventos, getExperienciasProyectos } from '@/services/experiencias.service';
 
 export default function useExperienciasHook() {
 
   const experienciasProyectos = getExperienciasProyectos();
 
   const experienciasEventos = getExperienciasEventos();
+  
+  const experienciasCampañasOffline = getExperienciasCampañasOffline();
 
-  return { experienciasProyectos, experienciasEventos };
+  const experienciasCampañasOnline = getExperienciasCampañasOnline();
+
+  return { experienciasProyectos, experienciasEventos, experienciasCampañasOffline, experienciasCampañasOnline };
 }

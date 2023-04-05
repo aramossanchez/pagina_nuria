@@ -8,7 +8,7 @@ import ExperienciasMovilSliderComponent from '@/components/experienciasMovilSlid
 
 export default function ExperienciasMovilContainer() {
 
-  const { experienciasProyectos, experienciasEventos } = useExperienciasMovilHook();
+  const { experienciasProyectos, experienciasEventos, experienciasCampañasOffline, experienciasCampañasOnline } = useExperienciasMovilHook();
 
   const [loading, setLoading] = useState(true);
 
@@ -18,13 +18,13 @@ export default function ExperienciasMovilContainer() {
         <Link href={`/#${experienciasProyectos.section}`} scroll={false}>
           Proyectos
         </Link>
-        <Link href="/#eventos" scroll={false}>
+        <Link href={`/#${experienciasEventos.section}`} scroll={false}>
           Eventos
         </Link>
-        <Link href="/#campañasOffline" scroll={false}>
+        <Link href={`/#${experienciasCampañasOffline.section}`} scroll={false}>
           Campañas Offline
         </Link>
-        <Link href="/#campañasOnline" scroll={false}>
+        <Link href={`/#${experienciasCampañasOnline.section}`} scroll={false}>
           Campañas Online
         </Link>
         <div className={style.white_opacity_right}>asd</div>
@@ -42,7 +42,6 @@ export default function ExperienciasMovilContainer() {
       <h1>EXPERIENCIAS</h1>
       <div id='inicio' className={style.destiny_link}></div>
       <div className={style.inicio_experiencia_container}>
-        <div className={style.text_section_inicio}></div>
         <span>
           Tengo que agradecer la ruta escogida, porque gracias a ella he aprendido a gestionar y dirigir proyectos, organizar grandes eventos y desarrollar campañas (offline y online). Aunque he de admitir que el sendero no siempre ha sido un camino de rosas, cada piedra en el camino me ha ayudado a aumentar mi seguridad, intuición y creatividad.
         </span>
@@ -50,8 +49,9 @@ export default function ExperienciasMovilContainer() {
       </div>
       <ExperienciasMovilSliderComponent experiencias={experienciasProyectos} />
       <ExperienciasMovilSliderComponent experiencias={experienciasEventos} introduccion='Desde el año 2018 hasta finales del 2022, todas las actividades, acciones y promociones llevadas a cabo en el Centro Comercial Imaginalia son realizadas bajo mi dirección, supervisión y coordinación. Lo mismo pasa con las actividades promocionales llevadas a cabo en Denominación de Origen Manchuela desde finales de 2022 hasta mediados de 2023. De todo lo creado y dirigido, destaco:' />
-      <div className={style.information_container_inicio}>
-        <div className={style.text_section_inicio}></div>
+      <ExperienciasMovilSliderComponent experiencias={experienciasCampañasOffline} introduccion='Desde el año 2018 hasta finales del 2022, todas las campañas offline llevadas a cabo en el Centro Comercial Imaginalia son realizadas bajo mi dirección, supervisión. Lo mismo pasa con las campañas llevadas a cabo en Denominación de Origen Manchuela desde finales de 2022 hasta mediados de 2023.De todo lo creado y dirigido, destaco:' />
+      <ExperienciasMovilSliderComponent experiencias={experienciasCampañasOnline} introduccion='Desde el año 2018 hasta finales del 2022, todas las publicaciones y campañas online llevadas a cabo en el Centro Comercial Imaginalia son realizadas bajo mi dirección, supervisión. Lo mismo pasa con las publicaciones y campañas llevadas a cabo en Denominación de Origen Manchuela desde finales de 2022 hasta mediados de 2023. De todo lo creado y dirigido, destaco:' />
+      <div className={style.final_experiencia_container}>
         <span>
           Me encantaría seguir aprendiendo y creciendo tanto a nivel personal como a nivel profesional. Por eso, te invito a que me conozcas.
         </span>

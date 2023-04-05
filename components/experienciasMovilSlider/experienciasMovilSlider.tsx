@@ -43,7 +43,7 @@ export default function ExperienciasMovilSliderComponent({ experiencias, introdu
       })}
       <div id={experiencias.section} className={style.destiny_link}></div>
       <div className={style.experiencia_container}>
-        <h2>{experiencias.section.toUpperCase()}</h2>
+        <h2>{experiencias.name}</h2>
         <div className={style.introduccion}>{introduccion}</div>
         <div className={style.slider_container} ref={sliderContainerRef}>
           {experiencias.verMas.map((verMas) => {

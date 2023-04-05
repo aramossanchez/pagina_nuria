@@ -103,16 +103,18 @@
             }
         }
 
-        .experiencia_container {
-            width: 100vw;
-            overflow-x: hidden;
-            box-sizing: border-box;
+        .final_experiencia_container {
+            margin-top: 5em;
             border-top: 1px solid rgba(128, 128, 128, 0.322);
+            width: 100vw;
+            padding: 0 1em;
+            box-sizing: border-box;
+            padding-bottom: 8em;
+            padding-top: 3em;
 
             h2 {
-                padding-left: 0.5em;
+                text-align: center;
             }
-
         }
 
         h1 {

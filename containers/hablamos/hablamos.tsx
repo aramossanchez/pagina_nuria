@@ -1,7 +1,7 @@
 import { IconBrandLinkedin, IconMail, IconPhone } from '@tabler/icons-react';
 import Image from 'next/image';
 import style from './hablamos.module.scss';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function HablamosComponent() {
 

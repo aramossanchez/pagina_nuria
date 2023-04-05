@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import style from './experienciasMovilDetalle.module.scss';
-import {basePath} from '../../../utils/variablesEnv.service';
+import {basePath} from '../../../config/config';
 
 export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) {
 

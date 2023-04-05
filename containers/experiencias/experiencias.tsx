@@ -6,7 +6,7 @@ import ButtonArrowLeftComponent from '../../components/buttonArrowLeft/buttonArr
 import useExperienciasHook from './experiencias.hook';
 import ExperienciasVerMasComponent from '@/components/experiencias/experienciasVerMas/experienciasVerMas';
 import ExperienciasDetalleComponent from '@/components/experiencias/experienciasDetalles/experienciasDetalles';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function ExperienciasComponent({ previous, next }) {
 

@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import style from './experienciasMovilSlider.module.scss';
 import { IconCircle, IconCircleFilled } from '@tabler/icons-react';
 import ExperienciasMovilDetalleComponent from './experienciasMovilDetalle/experienciasMovilDetalle';
-import { basePath } from '../../config';
-
+import {basePath} from '../../config/config';
 
 export default function ExperienciasMovilSliderComponent({ experiencias, introduccion = '' }) {
 

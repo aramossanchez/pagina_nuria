@@ -5,7 +5,7 @@ import { useState } from 'react';
 import style from './experienciasMovil.module.scss';
 import useExperienciasMovilHook from './experienciasMovil.hook';
 import ExperienciasMovilSliderComponent from '@/components/experienciasMovilSlider/experienciasMovilSlider';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function ExperienciasMovilContainer() {
 

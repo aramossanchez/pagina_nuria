@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import style from './miRutaMovil.module.scss';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 
 export default function MiRutaMovilContainer() {

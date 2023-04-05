@@ -7,7 +7,7 @@ import useMiRutaHook from './miRuta.hook';
 import MiRutaJobComponent from '@/components/miRutaJob/miRutaJob.component';
 import MiRutaInformationComponent from '@/components/miRutaInformation/miRutaInformation.component';
 import LoaderComponent from '@/components/loader/loader.component';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function MiRutaComponent({ previous, next }) {
 

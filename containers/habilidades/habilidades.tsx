@@ -5,7 +5,7 @@ import { IconBook, IconBulbFilled, IconHeart, IconMicrophone2, IconMilitaryRank,
 import ButtonArrowLeftComponent from '@/components/buttonArrowLeft/buttonArrowLeft.component';
 import { useState } from 'react';
 import LoaderComponent from '@/components/loader/loader.component';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function HabilidadesComponent({ previous, next }) {
 

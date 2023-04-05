@@ -2,7 +2,7 @@ import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
 import { useState } from 'react';
 import style from './perfilDeViajeraMovil.module.scss';
-import {basePath} from '../../utils/variablesEnv.service';
+import {basePath} from '../../config/config';
 
 export default function PerfilDeViajeraMovilComponent() {
 

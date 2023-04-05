@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {basePath} from '../../../utils/variablesEnv.service';
+import {basePath} from '../../../config/config';
 
 export default function ExperienciasVerMasComponent({ title, imageUrl, imgAlt }) {
 

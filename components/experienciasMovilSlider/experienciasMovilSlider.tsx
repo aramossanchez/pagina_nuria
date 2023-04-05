@@ -31,8 +31,6 @@ export default function ExperienciasMovilSliderComponent({ experiencias, introdu
     };
   }, []);
 
-  const [loading, setLoading] = useState(true);
-
   return (
     <>
       {experiencias.detalle.map((detalle) => {

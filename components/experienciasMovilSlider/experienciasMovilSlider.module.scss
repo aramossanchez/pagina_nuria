@@ -1,0 +1,83 @@
+.component_container {
+    opacity: 0;
+}
+
+@media (max-width: 873px) {
+
+    .destiny_link {
+        margin-bottom: 5.3em;
+    }
+
+    .experiencia_container {
+        width: 100vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(128, 128, 128, 0.322);
+
+        h2 {
+            padding-left: 0.5em;
+        }
+
+        .slider_container {
+            margin-top: 2em;
+            width: 100vw;
+            overflow-x: scroll;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .slider_card_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                min-width: 100%;
+
+                .slider_card {
+                    max-width: 70vw;
+                    min-width: 70vw;
+                    padding: 2em 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-left: 2px solid rgba(128, 128, 128, 0.322);
+                    border-right: 2px solid rgba(128, 128, 128, 0.322);
+
+                    >span:last-child {
+                        border-radius: 10px;
+                        padding: 0.25em 0.5em;
+                        font-weight: 500;
+                        color: white;
+                        background-color: rgb(67, 195, 255);
+                    }
+
+                }
+
+                span {
+                    font-weight: 600;
+                    color: black;
+                    margin-bottom: 0.5em;
+                    white-space: wrap;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+
+    .points_slider_container {
+        margin-top: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+
+        svg {
+            color: var(--primaryColor);
+        }
+    }
+}

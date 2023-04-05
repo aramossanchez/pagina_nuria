@@ -10,6 +10,7 @@ import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil'
 import HabilidadesComponent from '../habilidades/habilidades';
 import HablamosComponent from '../hablamos/hablamos';
 import ExperienciasMovilContainer from '../experienciasMovil/experienciasMovil';
+import {basePath} from '../../config/config';
 
 export default function IndexContainer() {
 
@@ -53,7 +54,7 @@ export default function IndexContainer() {
         </div>
       }
       <article className={style.presentation_container}>
-        <div className={style.background_image}></div>
+        <div className={style.background_image} style={{backgroundImage: `url('${basePath}images/background_index_header.jpg')`}}></div>
         <div className={style.header_mobile}>
           <div onClick={() => {setPopUpSelected(''); document.documentElement.scrollTop = 0;}}>
             <IconHome2 />

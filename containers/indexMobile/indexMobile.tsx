@@ -1,11 +1,12 @@
 import style from './indexMobile.module.scss';
 import { IconEPassport, IconFriends, IconGps, IconLuggage, IconTrekking } from '@tabler/icons-react';
+import {basePath} from '../../config/config';
 
 export default function IndexMobileContainer({ setPopUpSelected1, setPopUpSelected2, setPopUpSelected3, setPopUpSelected4, setPopUpSelected5}) {
 
   return (
     <div className={style.mobile_container}>
-      <div>
+      <div style={{backgroundImage: `url('${basePath}images/background_index_header.jpg')`}}>
         <h1>¡Hola! ¿Quieres viajar conmigo?</h1>
         <span>Acompáñame en este viaje y descubre todas mis experiencias</span>
       </div>

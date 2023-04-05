@@ -58,6 +58,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Install gh-pages dependency
         run: ${{ steps.detect-package-manager.outputs.manager }} install gh-pages --save-dev
+      - name: Configure Git credentials
+        run: |
+          git config --global user.email "armandoramossanchez@gmail.com"
+          git config --global user.name "aramossanchez"
+          git config --global url."https://${{ secrets.GH_PAT }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
       - name: Configure Git user
         run: |
           git config --global user.email "armandoramossanchez@gmail.com"

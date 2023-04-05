@@ -11,9 +11,6 @@ export default function MiRutaMovilContainer() {
   return (
     <article className={style.component_container}>
       <div className={style.miRutaMovil_links}>
-        <Link href="/#inicio" scroll={false}>
-          Agradecimientos
-        </Link>
         <Link href="/#cumar" scroll={false}>
           Cumar
         </Link>
@@ -39,7 +36,6 @@ export default function MiRutaMovilContainer() {
         />
       </div>
       <h1>MI RUTA</h1>
-      <div id='inicio' className={style.destiny_link}></div>
       <div className={style.information_container_inicio}>
         <div className={style.text_section_inicio}></div>
         <span>

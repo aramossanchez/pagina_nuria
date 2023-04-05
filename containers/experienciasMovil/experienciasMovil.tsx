@@ -15,9 +15,6 @@ export default function ExperienciasMovilContainer() {
   return (
     <article className={style.component_container}>
       <div className={style.miRutaMovil_links}>
-        <Link href="/#inicio" scroll={false}>
-          Agradecimientos
-        </Link>
         <Link href={`/#${experienciasProyectos.section}`} scroll={false}>
           Proyectos
         </Link>
@@ -52,7 +49,7 @@ export default function ExperienciasMovilContainer() {
         <h2>¡TE INVITO A DESCUBRIRLO!</h2>
       </div>
       <ExperienciasMovilSliderComponent experiencias={experienciasProyectos} />
-      <ExperienciasMovilSliderComponent experiencias={experienciasEventos} />
+      <ExperienciasMovilSliderComponent experiencias={experienciasEventos} introduccion='Desde el año 2018 hasta finales del 2022, todas las actividades, acciones y promociones llevadas a cabo en el Centro Comercial Imaginalia son realizadas bajo mi dirección, supervisión y coordinación. Lo mismo pasa con las actividades promocionales llevadas a cabo en Denominación de Origen Manchuela desde finales de 2022 hasta mediados de 2023. De todo lo creado y dirigido, destaco:' />
       <div className={style.information_container_inicio}>
         <div className={style.text_section_inicio}></div>
         <span>

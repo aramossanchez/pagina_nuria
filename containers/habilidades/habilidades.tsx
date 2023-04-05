@@ -5,6 +5,7 @@ import { IconBook, IconBulbFilled, IconHeart, IconMicrophone2, IconMilitaryRank,
 import ButtonArrowLeftComponent from '@/components/buttonArrowLeft/buttonArrowLeft.component';
 import { useState } from 'react';
 import LoaderComponent from '@/components/loader/loader.component';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function HabilidadesComponent({ previous, next }) {
 
@@ -15,14 +16,14 @@ export default function HabilidadesComponent({ previous, next }) {
       <Image
         width={250}
         height={250}
-        src={'/images/sello.png'}
+        src={`${basePath}images/sello.png`}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/images/maleta.png'}
+          src={`${basePath}images/maleta.png`}
           alt={'Foto de maleta'}
           onLoadingComplete={() => setLoading(false)}
         />

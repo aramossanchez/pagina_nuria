@@ -2,6 +2,7 @@ import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
 import { useState } from 'react';
 import style from './perfilDeViajeraMovil.module.scss';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function PerfilDeViajeraMovilComponent() {
 
@@ -13,7 +14,7 @@ export default function PerfilDeViajeraMovilComponent() {
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/pagina_nuria/images/perfil_viajera.jpg'}
+          src={`${basePath}images/perfil_viajera.jpg`}
           alt={'Foto perfil viajera'}
           onLoadingComplete={() => setLoading(false)}
         />

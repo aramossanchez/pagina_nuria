@@ -5,6 +5,7 @@ import { useState } from 'react';
 import style from './experienciasMovil.module.scss';
 import useExperienciasMovilHook from './experienciasMovil.hook';
 import ExperienciasMovilSliderComponent from '@/components/experienciasMovilSlider/experienciasMovilSlider';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function ExperienciasMovilContainer() {
 
@@ -34,7 +35,7 @@ export default function ExperienciasMovilContainer() {
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/pagina_nuria/images/camino_mis_viajes.png'}
+          src={`${basePath}images/camino_mis_viajes.png`}
           alt={'Foto mi ruta'}
           onLoadingComplete={() => setLoading(false)}
         />

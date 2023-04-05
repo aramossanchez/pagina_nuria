@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import style from './experienciasDetalles.module.scss';
 import { IconSquareRoundedX } from '@tabler/icons-react';
+import {basePath} from '../../../utils/variablesEnv.service';
 
 export default function ExperienciasComponent({ title, imageUrl, imgAlt, imgSize, detail, list = [], setSelectedProject }) {
 
@@ -10,7 +11,7 @@ export default function ExperienciasComponent({ title, imageUrl, imgAlt, imgSize
       <Image
         width={imgSize}
         height={imgSize}
-        src={imageUrl}
+        src={basePath+imageUrl}
         alt={imgAlt}
       />
       <span dangerouslySetInnerHTML={{ __html: detail }} />

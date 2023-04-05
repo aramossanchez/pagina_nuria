@@ -7,6 +7,7 @@ import useMiRutaHook from './miRuta.hook';
 import MiRutaJobComponent from '@/components/miRutaJob/miRutaJob.component';
 import MiRutaInformationComponent from '@/components/miRutaInformation/miRutaInformation.component';
 import LoaderComponent from '@/components/loader/loader.component';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function MiRutaComponent({ previous, next }) {
 
@@ -21,14 +22,14 @@ export default function MiRutaComponent({ previous, next }) {
       <Image
         width={250}
         height={250}
-        src={'/images/sello.png'}
+        src={`${basePath}images/sello.png`}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/images/camino_mis_viajes.png'}
+          src={`${basePath}images/camino_mis_viajes.png`}
           alt={'Foto perfil viajera'}
           onLoadingComplete={() => setLoading(false)}
         />
@@ -36,7 +37,7 @@ export default function MiRutaComponent({ previous, next }) {
           <Image
             width={50}
             height={50}
-            src={'/images/googlemaps.svg'}
+            src={`${basePath}images/googlemaps.svg`}
             alt={'Foto perfil viajera'}
             onClick={() => setSelectedSection('final')}
           />

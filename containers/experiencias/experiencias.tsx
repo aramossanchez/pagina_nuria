@@ -3,10 +3,10 @@ import style from './experiencias.module.scss';
 import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
 import { useState } from 'react';
 import ButtonArrowLeftComponent from '../../components/buttonArrowLeft/buttonArrowLeft.component';
-import { IconSquareRoundedX } from '@tabler/icons-react';
 import useExperienciasHook from './experiencias.hook';
 import ExperienciasVerMasComponent from '@/components/experiencias/experienciasVerMas/experienciasVerMas';
 import ExperienciasDetalleComponent from '@/components/experiencias/experienciasDetalles/experienciasDetalles';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function ExperienciasComponent({ previous, next }) {
 
@@ -20,7 +20,7 @@ export default function ExperienciasComponent({ previous, next }) {
       <Image
         width={250}
         height={250}
-        src={'/images/sello.png'}
+        src={`${basePath}images/sello.png`}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>

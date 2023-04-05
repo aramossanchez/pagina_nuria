@@ -1,6 +1,7 @@
 import { IconBrandLinkedin, IconMail, IconPhone } from '@tabler/icons-react';
 import Image from 'next/image';
 import style from './hablamos.module.scss';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function HablamosComponent() {
 
@@ -10,7 +11,7 @@ export default function HablamosComponent() {
         <Image
           width={500}
           height={500}
-          src={'/images/hablamosImg1.svg'}
+          src={`${basePath}images/hablamosImg1.svg`}
           alt={'Imagen de tarjeta de visita'}
         />
       </div>
@@ -18,7 +19,7 @@ export default function HablamosComponent() {
         <Image
           width={500}
           height={500}
-          src={'/images/hablamosImg2.svg'}
+          src={`${basePath}images/hablamosImg2.svg`}
           alt={'Imagen de tarjeta de visita'}
         />
       </div>

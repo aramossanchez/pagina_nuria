@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import style from './experienciasMovilDetalle.module.scss';
+import {basePath} from '../../../utils/variablesEnv.service';
 
 export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) {
 
@@ -11,7 +12,7 @@ export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) 
         <Image
           width={detalle.imgSize}
           height={detalle.imgSize}
-          src={detalle.imageUrl}
+          src={basePath+detalle.imageUrl}
           alt={detalle.imgAlt}
         />
         <span dangerouslySetInnerHTML={{ __html: detalle.detail }} />

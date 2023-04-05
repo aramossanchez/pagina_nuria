@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "NODE_ENV=production next build && next export && gh-pages -d out"
   },
   "dependencies": {
     "@tabler/icons-react": "^2.10.0",

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {basePath} from '../../../utils/variablesEnv.service';
 
 export default function ExperienciasVerMasComponent({ title, imageUrl, imgAlt }) {
 
@@ -8,7 +9,7 @@ export default function ExperienciasVerMasComponent({ title, imageUrl, imgAlt })
       <Image
         width={250}
         height={250}
-        src={imageUrl}
+        src={basePath+imageUrl}
         alt={imgAlt}
       />
       <span>+ VER MÁS</span>

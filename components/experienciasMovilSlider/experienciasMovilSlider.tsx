@@ -1,9 +1,9 @@
-import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import style from './experienciasMovilSlider.module.scss';
 import { IconCircle, IconCircleFilled } from '@tabler/icons-react';
 import ExperienciasMovilDetalleComponent from './experienciasMovilDetalle/experienciasMovilDetalle';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function ExperienciasMovilSliderComponent({ experiencias, introduccion = '' }) {
 
@@ -54,7 +54,7 @@ export default function ExperienciasMovilSliderComponent({ experiencias, introdu
                   <Image
                     width={250}
                     height={250}
-                    src={verMas.imageUrl}
+                    src={basePath+verMas.imageUrl}
                     alt={verMas.imgAlt}
                   />
                   <span onClick={() => setOpenVerMas(verMas.id)}>+ VER MÁS</span>

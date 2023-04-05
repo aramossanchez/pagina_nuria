@@ -3,6 +3,7 @@ import style from './perfilDeViajera.module.scss';
 import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
 import LoaderComponent from '@/components/loader/loader.component';
 import { useState } from 'react';
+import {basePath} from '../../utils/variablesEnv.service';
 
 export default function PerfilDeViajeraComponent({ next }) {
 
@@ -13,14 +14,14 @@ export default function PerfilDeViajeraComponent({ next }) {
       <Image
         width={250}
         height={250}
-        src={'/images/sello.png'}
+        src={`${basePath}images/sello.png`}
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/images/perfil_viajera.jpg'}
+          src={`${basePath}images/perfil_viajera.jpg`}
           alt={'Foto perfil viajera'}
           onLoadingComplete={() => setLoading(false)}
         />

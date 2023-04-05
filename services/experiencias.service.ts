@@ -166,7 +166,7 @@ const experienciasCampañasOffline = {
     {
       id: 'navidades',
       title: 'Navidades',
-      imageUrl: 'images/espectaculoInfantil.png',
+      imageUrl: 'images/navidad.png',
       imgAlt: 'Navidades',
       imgSize: 150,
       detail: 'También es una de las acciones más consolidadas por el centro comercial. Dentro de la programación de actividades infantiles y navideñas, bajo mi dirección se creó y desarrolló la llegada oficial de Papá Noel a la ciudad. Acción que tuvo gran éxito entre los habitantes de la ciudad y provincia ya que es la única llegada oficial del personaje navideño. <a href="http://www.facebook.com/watch/?v=4808242155934890" target="_blank" rel="noopener noreferrer">(link)</a>',

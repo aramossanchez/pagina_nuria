@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import style from './miRutaMovil.module.scss';
+import {basePath} from '../../utils/variablesEnv.service';
+
 
 export default function MiRutaMovilContainer() {
 
@@ -30,7 +32,7 @@ export default function MiRutaMovilContainer() {
         {loading && <LoaderComponent />}
         <Image
           fill
-          src={'/pagina_nuria/images/camino_mis_viajes.png'}
+          src={`${basePath}images/camino_mis_viajes.png`}
           alt={'Foto mi ruta'}
           onLoadingComplete={() => setLoading(false)}
         />

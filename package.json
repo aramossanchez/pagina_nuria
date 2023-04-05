@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "NODE_ENV=production next build && next export && gh-pages -d out"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@tabler/icons-react": "^2.10.0",
@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "gh-pages": "^5.0.0",
     "sass": "^1.58.3"
   }
 }

@@ -58,5 +58,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Install gh-pages dependency
         run: ${{ steps.detect-package-manager.outputs.manager }} install gh-pages --save-dev
+      - name: Configure Git user
+        run: |
+          git config --global user.email "armandoramossanchez@gmail.com"
+          git config --global user.name "aramossanchez"
       - name: Deploy to GitHub Pages
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run deploy

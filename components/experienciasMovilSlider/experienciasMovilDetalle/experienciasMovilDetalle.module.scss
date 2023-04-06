@@ -11,7 +11,7 @@
         left: 0;
         width: 100vw;
         min-height: 100vh;
-        background-color: rgba(255, 255, 255, 0.384);
+        background-color: rgba(255, 255, 255, 0.829);
     }
 
     .popup_verMas {
@@ -29,7 +29,7 @@
         border-top-right-radius: 40px;
         background-color: rgb(191, 218, 230);
         color: black;
-        padding: 1em 1em 2em 1em;
+        padding: 1em 1em 0em 1em;
         animation-duration: 0.4s;
         animation-name: showExperience;
 
@@ -61,14 +61,36 @@
             padding-left: 1.5em;
             font-size: 80%;
         }
+        svg {
+            position: relative;
+            width: 2.5em;
+            height: 2.5em;
+            animation-duration: 2s;
+            animation-name: upDown;
+            animation-iteration-count: infinite;
+        }
     }
 }
 
 
 
+@keyframes upDown {
+    0% {
+        top: -3px;
+    }
+
+    50% {
+        top: 3px;
+    }
+
+    100% {
+        top: -3px;
+    }
+}
+
 @keyframes showExperience {
     0% {
-        bottom: -200vh;
+        bottom: -100vh;
     }
 
     100% {

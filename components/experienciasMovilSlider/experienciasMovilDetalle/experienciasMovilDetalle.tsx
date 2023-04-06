@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import style from './experienciasMovilDetalle.module.scss';
-import {basePath} from '../../../config/config';
+import { basePath } from '../../../config/config';
+import { IconChevronDown } from '@tabler/icons-react';
 
 export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) {
 
@@ -12,7 +13,7 @@ export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) 
         <Image
           width={detalle.imgSize}
           height={detalle.imgSize}
-          src={basePath+detalle.imageUrl}
+          src={basePath + detalle.imageUrl}
           alt={detalle.imgAlt}
         />
         <span dangerouslySetInnerHTML={{ __html: detalle.detail }} />
@@ -24,7 +25,9 @@ export default function ExperienciasMovilDetalleComponent({ detalle, onClick }) 
               );
             })}
           </ul>
-        } </div>
+        }
+        <IconChevronDown onClick={onClick} />
+      </div>
     </>
   );
 }

@@ -1,28 +1,20 @@
 import Image from 'next/image';
-import style from './habilidades.module.scss';
-import ButtonArrowRightComponent from '../../components/buttonArrowRight/buttonArrowRight.component';
-import { IconBook, IconBulbFilled, IconHeart, IconMicrophone2, IconMilitaryRank, IconRocket, IconSettingsFilled, IconUsers } from '@tabler/icons-react';
-import ButtonArrowLeftComponent from '@/components/buttonArrowLeft/buttonArrowLeft.component';
+import style from './habilidadesMovil.module.scss';
 import {basePath} from '../../config/config';
+import { IconBook, IconBulbFilled, IconHeart, IconMicrophone2, IconMilitaryRank, IconRocket, IconSettingsFilled, IconUsers } from '@tabler/icons-react';
 
-export default function HabilidadesComponent({ previous, next }) {
+export default function HabilidadesMovilContainer() {
 
   return (
     <article className={style.component_container}>
-      <Image
-        width={250}
-        height={250}
-        src={`${basePath}images/sello.png`}
-        alt={'Foto de sello'}
-      />
       <div className={style.img_container}>
         <Image
           fill
           src={`${basePath}images/maleta.png`}
-          alt={'Foto de maleta'}
+          alt={'Foto habilidades'}
         />
       </div>
-      <div className={style.information_container}>
+      <div className={style.habilidades_container}>
         <h1>HABILIDADES</h1>
         <div className={style.soft_skills}>
 
@@ -86,8 +78,6 @@ export default function HabilidadesComponent({ previous, next }) {
           </div>
         </div>
       </div>
-      <ButtonArrowLeftComponent onClick={previous} />
-      <ButtonArrowRightComponent onClick={next} />
     </article>
   );
 }

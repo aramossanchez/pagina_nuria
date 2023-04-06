@@ -11,6 +11,7 @@ import HabilidadesComponent from '../habilidades/habilidades';
 import HablamosComponent from '../hablamos/hablamos';
 import ExperienciasMovilContainer from '../experienciasMovil/experienciasMovil';
 import {basePath} from '../../config/config';
+import HabilidadesMovilContainer from '../habilidadesMovil/habilidadesMovil.container';
 
 export default function IndexContainer() {
 
@@ -114,6 +115,9 @@ export default function IndexContainer() {
           }
           {popUpSelected === 'eventosYCampañas' &&
             <ExperienciasMovilContainer />
+          }
+          {popUpSelected === 'habilidades' &&
+            <HabilidadesMovilContainer />
           }
         </div>
       </article>

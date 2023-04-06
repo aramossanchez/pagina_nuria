@@ -1,7 +1,5 @@
-import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import style from './experienciasMovil.module.scss';
 import useExperienciasMovilHook from './experienciasMovil.hook';
 import ExperienciasMovilSliderComponent from '@/components/experienciasMovilSlider/experienciasMovilSlider';
@@ -10,8 +8,6 @@ import {basePath} from '../../config/config';
 export default function ExperienciasMovilContainer() {
 
   const { experienciasProyectos, experienciasEventos, experienciasCampañasOffline, experienciasCampañasOnline } = useExperienciasMovilHook();
-
-  const [loading, setLoading] = useState(true);
 
   return (
     <article className={style.component_container}>
@@ -32,12 +28,10 @@ export default function ExperienciasMovilContainer() {
         <div className={style.white_opacity_left}>asd</div>
       </div>
       <div className={style.img_container}>
-        {loading && <LoaderComponent />}
         <Image
           fill
-          src={`${basePath}images/camino_mis_viajes.png`}
+          src={`${basePath}images/experiencias.png`}
           alt={'Foto mi ruta'}
-          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <h1>EXPERIENCIAS</h1>

@@ -1,22 +1,16 @@
-import LoaderComponent from '@/components/loader/loader.component';
 import Image from 'next/image';
-import { useState } from 'react';
 import style from './perfilDeViajeraMovil.module.scss';
 import {basePath} from '../../config/config';
 
 export default function PerfilDeViajeraMovilComponent() {
 
-  const [loading, setLoading] = useState(true);
-
   return (
     <article className={style.component_container}>
       <div className={style.img_container}>
-        {loading && <LoaderComponent />}
         <Image
           fill
           src={`${basePath}images/perfil_viajera.jpg`}
           alt={'Foto perfil viajera'}
-          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <div className={style.information_container}>

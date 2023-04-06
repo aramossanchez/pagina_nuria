@@ -6,7 +6,6 @@ import ButtonArrowLeftComponent from '../../components/buttonArrowLeft/buttonArr
 import useMiRutaHook from './miRuta.hook';
 import MiRutaJobComponent from '@/components/miRutaJob/miRutaJob.component';
 import MiRutaInformationComponent from '@/components/miRutaInformation/miRutaInformation.component';
-import LoaderComponent from '@/components/loader/loader.component';
 import {basePath} from '../../config/config';
 
 export default function MiRutaComponent({ previous, next }) {
@@ -14,8 +13,6 @@ export default function MiRutaComponent({ previous, next }) {
   const { miRutaJobsArray, miRutaInformationArray } = useMiRutaHook();
 
   const [selectedSection, setSelectedSection] = useState('inicio');
-
-  const [loading, setLoading] = useState(true);
 
   return (
     <article className={style.component_container}>
@@ -26,12 +23,10 @@ export default function MiRutaComponent({ previous, next }) {
         alt={'Foto de sello'}
       />
       <div className={style.img_container}>
-        {loading && <LoaderComponent />}
         <Image
           fill
           src={`${basePath}images/camino_mis_viajes.png`}
           alt={'Foto perfil viajera'}
-          onLoadingComplete={() => setLoading(false)}
         />
         <div className={style.section_selector_container}>
           <Image

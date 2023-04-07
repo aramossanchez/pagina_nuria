@@ -1,4 +1,5 @@
-.arrow_to_up_show, .arrow_to_up_closed {
+.arrow_to_up_show,
+.arrow_to_up_closed {
     display: none;
 }
 
@@ -85,6 +86,10 @@
     color: white;
 
     .header_mobile {
+        display: none;
+    }
+
+    .hablamos_mobile {
         display: none;
     }
 
@@ -236,7 +241,9 @@
 }
 
 @media (max-width: 873px) {
-    .arrow_to_up_show, .arrow_to_up_closed {
+
+    .arrow_to_up_show,
+    .arrow_to_up_closed {
         position: fixed;
         bottom: 7em;
         right: 1em;
@@ -252,12 +259,14 @@
         animation-duration: 0.5s;
         animation-name: showArrowUp;
     }
+
     .arrow_to_up_show {
         animation-duration: 0.5s;
         animation-name: showArrowUp;
         width: 2.5em;
         height: 2.5em;
     }
+
     .arrow_to_up_closed {
         animation-duration: 0.5s;
         animation-name: closeArrowUp;
@@ -303,6 +312,60 @@
                 top: 0.6em;
                 right: 0.5em;
                 cursor: pointer;
+            }
+        }
+        .hablamos_mobile_open {
+            left: 0;
+        }
+        .hablamos_mobile_closed {
+            left: -100%;
+        }
+        .hablamos_mobile_open, .hablamos_mobile_closed {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            z-index: 4;
+            background-color: white;
+            color: black;
+            padding: 2em 1em;
+            box-sizing: border-box;
+            gap: 2em;
+            box-shadow: 0px 8px 20px -2px rgb(104, 104, 104);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            transition: 0.3s;
+
+            .arrow_and_first_message_container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.5em;
+
+                svg {
+                    width: 2em;
+                    height: 2em;
+                }
+            }
+
+            .hablamos_mobile_img_container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.5em;
+
+                img {
+                    width: 3.5em;
+                    height: 3.5em;
+                    border: 2px solid black;
+                    border-radius: 100%;
+                }
             }
         }
 
@@ -398,6 +461,7 @@
         height: 2.5em;
     }
 }
+
 @keyframes closeArrowUp {
     from {
         opacity: 1;
@@ -411,6 +475,7 @@
         height: 0;
     }
 }
+
 @keyframes showPopup {
     from {
         left: 200%;
@@ -420,6 +485,7 @@
         left: 10%
     }
 }
+
 @keyframes showHablamos {
     from {
         left: 200%;

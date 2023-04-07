@@ -3,20 +3,23 @@ import style from './index.module.scss';
 import PerfilDeViajeraComponent from '../perfilDeViajera/perfilDeViajera';
 import MiRutaComponent from '../miRuta/miRuta.tsx';
 import ExperienciasComponent from '../experiencias/experiencias.tsx';
-import { IconArrowBigUpFilled, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
+import { IconArrowBigUpFilled, IconArrowNarrowLeft, IconEPassport, IconFriends, IconGps, IconHome2, IconLuggage, IconMessage, IconTrekking } from '@tabler/icons-react';
 import IndexMobileContainer from '../indexMobile/indexMobile.tsx';
 import PerfilDeViajeraMovilComponent from '@/containers/perfilDeViajeraMovil/perfilDeViajeraMovil.component';
 import MiRutaMovilContainerContainer from '@/containers/miRutaMovil/miRutaMovil';
 import HabilidadesComponent from '../habilidades/habilidades';
 import HablamosComponent from '../hablamos/hablamos';
 import ExperienciasMovilContainer from '../experienciasMovil/experienciasMovil';
-import {basePath} from '../../config/config';
+import { basePath } from '../../config/config';
 import HabilidadesMovilContainer from '../habilidadesMovil/habilidadesMovil.container';
+import LabelWithInputDisableComponent from '@/components/labelWithInputDisable/labelWithInputDisable.component';
+import Image from 'next/image';
 
 export default function IndexContainer() {
 
   const [popUpSelected, setPopUpSelected] = useState('');
   const [scrollY, setScrollY] = useState(0);
+  const [hablamosMobileOpen, setHablamosMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,35 +58,55 @@ export default function IndexContainer() {
         </div>
       }
       <article className={style.presentation_container}>
-        <div className={style.background_image} style={{backgroundImage: `url('${basePath}images/background_index_header.jpg')`}}></div>
+        <div className={style.background_image} style={{ backgroundImage: `url('${basePath}images/background_index_header.jpg')` }}></div>
         <div className={style.header_mobile}>
-          <div onClick={() => {setPopUpSelected(''); document.documentElement.scrollTop = 0;}}>
+          <div onClick={() => { setPopUpSelected(''); document.documentElement.scrollTop = 0; }}>
             <IconHome2 />
           </div>
           <span>Nuria Zamora Fernandez</span>
           <div>
-            <IconMessage />
+            <IconMessage onClick={() => setHablamosMobileOpen(true)}/>
           </div>
+        </div>
+        <div className={ hablamosMobileOpen ? style.hablamos_mobile_open : style.hablamos_mobile_closed}>
+          <div className={style.arrow_and_first_message_container}>
+            <IconArrowNarrowLeft onClick={() => setHablamosMobileOpen(false)}/>
+            <span>DATOS PÚBLICOS</span>
+          </div>
+          <div className={style.hablamos_mobile_img_container}>
+            <span>Foto de perfil</span>
+            <Image
+              width={100}
+              height={100}
+              src={`${basePath}images/foto_perfil_mobile.jpg`}
+              alt={'Foto mi ruta'}
+            />
+          </div>
+          <LabelWithInputDisableComponent label='Nombre' value='Nuria' />
+          <LabelWithInputDisableComponent label='Apellidos' value='Zamora Fernandez' />
+          <LabelWithInputDisableComponent label='Teléfono' value='608 44 95 65' />
+          <LabelWithInputDisableComponent label='Correo electrónico' value='nuriazamora94@gmail.com' />
+          <LabelWithInputDisableComponent label='Perfil de Linkedin' value='nuria-zamora-fernández' link='https://www.linkedin.com/in/nuria-zamora-fern%C3%A1ndez-76020315a/' />
         </div>
         <header>
           <ul>
-            <li onClick={() => {setPopUpSelected('perfilDeViajera'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>
+            <li onClick={() => { setPopUpSelected('perfilDeViajera'); document.documentElement.scrollTop = 0; }} className={popUpSelected === 'perfilDeViajera' ? style.menu_link_selected : null}>
               <div><IconTrekking /></div>
               <span>Perfil de viajera</span>
             </li>
-            <li onClick={() => {setPopUpSelected('miRuta'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>
+            <li onClick={() => { setPopUpSelected('miRuta'); document.documentElement.scrollTop = 0; }} className={popUpSelected === 'miRuta' ? style.menu_link_selected : null}>
               <div><IconGps /></div>
               <span>Mi ruta</span>
             </li>
-            <li onClick={() => {setPopUpSelected('eventosYCampañas'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>
+            <li onClick={() => { setPopUpSelected('eventosYCampañas'); document.documentElement.scrollTop = 0; }} className={popUpSelected === 'eventosYCampañas' ? style.menu_link_selected : null}>
               <div><IconEPassport /></div>
               <span>Experiencias</span>
             </li>
-            <li onClick={() => {setPopUpSelected('habilidades'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'habilidades' ? style.menu_link_selected : null}>
+            <li onClick={() => { setPopUpSelected('habilidades'); document.documentElement.scrollTop = 0; }} className={popUpSelected === 'habilidades' ? style.menu_link_selected : null}>
               <div><IconLuggage /></div>
               <span>Habilidades</span>
             </li>
-            <li onClick={() => {setPopUpSelected('compañerosDeViaje'); document.documentElement.scrollTop = 0;}} className={popUpSelected === 'compañerosDeViaje' ? style.menu_link_selected : null}>
+            <li onClick={() => { setPopUpSelected('compañerosDeViaje'); document.documentElement.scrollTop = 0; }} className={popUpSelected === 'compañerosDeViaje' ? style.menu_link_selected : null}>
               <div><IconFriends /></div>
               <span>Compañeros de viaje</span>
             </li>

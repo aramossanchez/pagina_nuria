@@ -11,14 +11,14 @@
             flex-direction: column;
             margin: 2em 0 6em 0; 
             width: 100vw;
-            color: black;
+            color: var(--thirdColor);
             >div:first-child {
                 padding: 1em 0.5em;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
                 background-attachment: scroll !important;
-                color: white;
+                color: var(--secondaryColor);
                 min-height: 500px !important;
                 display: flex;
                 flex-direction: column;
@@ -44,7 +44,7 @@
                     span:last-child {
                         font-size: 0.8em;
                         background-color: var(--primaryColor);
-                        color: white;
+                        color: var(--secondaryColor);
                         padding: 0.25em 0.7em;
                         border-radius: 10px;
                         margin-top: 1em;

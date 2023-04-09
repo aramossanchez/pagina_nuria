@@ -3,7 +3,7 @@ import style from './miRutaJob.module.scss';
 export default function MiRutaJobComponent({ job }) {
 
   return (
-    <div className={style.mi_ruta_container_job}>
+    <div className={style.mi_ruta_container_job} key={job.id}>
       <h1>MI RUTA</h1>
       <h2>{job.job}</h2>
       <h6>{job.date}</h6>

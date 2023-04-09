@@ -33,17 +33,17 @@
 
             a,
             a:visited {
-                color: white;
+                color: var(--secondaryColor);
                 text-decoration: none;
                 font-weight: 600;
                 white-space: nowrap;
                 padding: 0.25em 0.5em;
                 margin: calc(0.5em + 2px) 0;
-                border: 2px solid white;
+                border: 2px solid var(--secondaryColor);
                 border-radius: 10px;
 
                 &:hover {
-                    background-color: white;
+                    background-color: var(--secondaryColor);
                     color: var(--primaryColor);
                 }
         
@@ -166,9 +166,9 @@
             }
 
             .chip {
-                color: white;
+                color: var(--secondaryColor);
                 border-radius: 20px;
-                background-color: rgb(67, 195, 255);
+                background-color: var(--primaryColor);
                 padding: 0.5em 1em;
             }
         }

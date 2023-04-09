@@ -83,7 +83,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    color: white;
+    color: var(--secondaryColor);
 
     .header_mobile {
         display: none;
@@ -169,7 +169,7 @@
             border-radius: 50px;
 
             &:hover {
-                color: white;
+                color: var(--secondaryColor);
             }
         }
     }
@@ -255,7 +255,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 100%;
-        color: white;
+        color: var(--secondaryColor);
         animation-duration: 0.5s;
         animation-name: showArrowUp;
     }
@@ -328,13 +328,13 @@
             width: 100vw;
             position: fixed;
             top: 0;
-            z-index: 4;
-            background-color: white;
-            color: black;
+            z-index: 12;
+            background-color: var(--secondaryColor);
+            color: var(--thirdColor);
             padding: 2em 1em;
             box-sizing: border-box;
             gap: 2em;
-            box-shadow: 0px 8px 20px -2px rgb(104, 104, 104);
+            box-shadow: 0px 8px 10px -6px rgb(83, 83, 83);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             transition: 0.3s;
@@ -363,7 +363,7 @@
                 img {
                     width: 3.5em;
                     height: 3.5em;
-                    border: 2px solid black;
+                    border: 2px solid var(--thirdColor);
                     border-radius: 100%;
                 }
             }
@@ -377,7 +377,7 @@
             bottom: 0;
             width: 100%;
             z-index: 11;
-            background-color: white;
+            background-color: var(--secondaryColor);
             border-top: 1px solid rgba(128, 128, 128, 0.322);
 
             ul {
@@ -395,7 +395,7 @@
                 li {
                     cursor: pointer;
                     transition: 0.2s;
-                    color: black;
+                    color: var(--thirdColor);
                     font-size: 12px;
                     padding: 0;
                     display: flex;

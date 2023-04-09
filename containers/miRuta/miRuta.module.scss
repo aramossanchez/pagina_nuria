@@ -48,8 +48,8 @@
             }
 
             span {
-                color: white;
-                background-color: rgb(67, 195, 255);
+                color: var(--secondaryColor);
+                background-color: var(--primaryColor);
                 padding: 0.25em 1em;
                 border-radius: 20px;
                 cursor: pointer;

@@ -54,15 +54,15 @@
                         border-radius: 10px;
                         padding: 0.25em 0.5em;
                         font-weight: 500;
-                        color: white;
-                        background-color: rgb(67, 195, 255);
+                        color: var(--secondaryColor);
+                        background-color: var(--primaryColor);
                     }
 
                 }
 
                 span {
                     font-weight: 600;
-                    color: black;
+                    color: var(--thirdColor);
                     margin-bottom: 0.5em;
                     white-space: wrap;
                     text-align: center;

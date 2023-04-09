@@ -77,9 +77,9 @@
     }
 
     .chip {
-        color: white;
+        color: var(--secondaryColor);
         border-radius: 20px;
-        background-color: rgb(67, 195, 255);
+        background-color: var(--primaryColor);
         padding: 0.5em 1em;
     }
 }

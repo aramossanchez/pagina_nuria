@@ -14,13 +14,13 @@ export default function IndexMobileContainer({ setPopUpSelected1, setPopUpSelect
         <div className={style.section_index_mobile}>
           <div><IconTrekking size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Perfil de viajera</h2>
-          <span>Una breve descripción sobre la sección Perfil de viajera</span>
+          <span>En este apartado encontrarás todo lo relacionado a mis datos personales y académicos.</span>
           <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected1();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>
           <div><IconGps size={56} color='rgb(67, 195, 255)' /></div>
           <h2>Mi ruta</h2>
-          <span>Una breve descripción sobre la sección Mi ruta</span>
+          <span>Te invito a visitar este apartado para saber más sobre toda mi experiencia y vida profesional.</span>
           <span onClick={() => {document.documentElement.scrollTop = 0; setPopUpSelected2();}}>+ VER MAS</span>
         </div>
         <div className={style.section_index_mobile}>

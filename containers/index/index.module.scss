@@ -224,6 +224,39 @@
     }
 }
 
+//ENLACES SUPERIORES
+@media (max-width: 1356px) {
+    .presentation_container {
+        header {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media (max-width: 1221px) {
+    .presentation_container {
+        header {
+            font-size: 0.8em;
+        }
+    }
+}
+
+@media (max-width: 1086px) {
+    .presentation_container {
+        header {
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .presentation_container {
+        header {
+            font-size: 0.6em;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .presentation_container {
         .text_presentation_container {

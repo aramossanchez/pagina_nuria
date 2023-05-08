@@ -194,6 +194,142 @@
     }
 }
 
+
+//TAMAÑOS DE IMÁGENES EN EXPERIENCIAS RESPONSIVE
+@media screen and (max-width: 1738px) {
+    .experiences_list {
+        div {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    .experiences_list {
+        div {
+            img {
+                width: 125px;
+                height: 125px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1406px) {
+    .experiences_list {
+        div {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1338px) {
+    .experiences_list {
+        div {
+            img {
+                width: 125px;
+                height: 125px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1154px) {
+    .experiences_list {
+        div {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+//TAMAÑOS DE LETRA RESPONSIVE
+@media screen and (max-width: 1919px) {
+  .component_container {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1496px) {
+  .component_container {
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .component_container {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1328px) {
+  .component_container {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  .component_container {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .component_container {
+    font-size: 0.5em;
+  }
+}
+
+
+//TAMAÑOS DE FOTO DE SELLO RESPONSIVE
+
+@media screen and (max-width: 1618px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1363px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
 @media (max-width: 873px) {
     .component_container {
         font-size: 12px;
@@ -282,6 +418,23 @@
             div:last-child {
                 border-right: 0px;
             }
+        }
+    }
+}
+
+//TAMAÑOS DE SELLOS RESPONSIVE
+@media screen and (max-width: 1611px) {
+    .component_container {
+        .img_container>div>div>span {
+            font-size: 1.9em;
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .component_container {
+        .img_container>div>div>span {
+            font-size: 1.7em;
         }
     }
 }

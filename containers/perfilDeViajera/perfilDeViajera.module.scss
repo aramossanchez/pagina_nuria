@@ -68,6 +68,85 @@
     }
 }
 
+//TAMAÑOS DE LETRA RESPONSIVE
+@media screen and (max-width: 1919px) {
+  .component_container {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 1496px) {
+  .component_container {
+    font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .component_container {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1328px) {
+  .component_container {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  .component_container {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .component_container {
+    font-size: 0.5em;
+  }
+}
+
+//TAMAÑOS DE FOTO DE SELLO RESPONSIVE
+
+@media screen and (max-width: 1618px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1363px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .component_container {
+        >img:first-child {
+            position: absolute;
+            right: -3%;
+            top: -7%;
+            opacity: 0.6;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+
 @media (max-width: 873px) {
     .component_container {
         opacity: 0;
